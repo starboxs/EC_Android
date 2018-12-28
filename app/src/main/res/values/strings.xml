@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EC_Android</string>
+
+    <!--navigation_item-->
+    <string name="navigation_indexnews">消息</string>
+    <string name="navigation_service">服務</string>
+    <string name="navigation_member">會員</string>
+
 </resources>

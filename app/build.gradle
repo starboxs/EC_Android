@@ -1,16 +1,43 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        classpath 'com.fernandocejas.frodo:frodo-plugin:0.8.1'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'com.fernandocejas.frodo'
+
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://maven.google.com' }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.marco.ec_android"
-        minSdkVersion 16
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
+        javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = false
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            debuggable true
+            buildConfigField "boolean", "LOG_ENABLE", "true"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -20,7 +47,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha09'
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha09'
     implementation 'com.android.support:design:28.0.0'
@@ -29,23 +56,62 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    //butterknife
+    //google
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'com.android.support:customtabs:28.0.0'
+//    implementation 'com.google.android.gms:play-services-location:16.0.1'
+//    implementation 'com.google.android.gms:play-services-gcm:16.0.1'
+//    implementation 'com.google.firebase:firebase-core:16.0.6'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //tool
     implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.orhanobut:logger:1.15'
 
-    //Retrofit
-    implementation(['com.squareup.okhttp3:logging-interceptor:3.9.0',//查看http請求的的log
-             'com.squareup.retrofit2:retrofit:2.3.0',
-             'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
-             'com.squareup.retrofit2:converter-gson:2.3.0'])
+    //儲存資料到裝置
+    implementation 'com.github.pwittchen:prefser:2.0.6'
 
-    //RxJava
-    implementation(['io.reactivex.rxjava2:rxandroid:2.0.1',
-             'io.reactivex.rxjava2:rxjava:2.1.3'])
-    //RxLifecycle
-    implementation(['com.trello.rxlifecycle2:rxlifecycle-kotlin:2.2.0',
-             'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0'])
+    //儲存裝置xml檔加密
+    implementation 'com.scottyab:secure-preferences-lib:0.1.4'
+
+    //驗證
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+
+    //flurry
+    implementation 'com.flurry.android:analytics:6.4.2'
+
+    //Rx
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.trello:rxlifecycle:1.0'
+    implementation 'com.trello:rxlifecycle-components:1.0'
 
     // Http Client
-    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:4.18.0'
+
+    // REST
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    // Permission
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.1.2'
+
+    // Location
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
+
+    // Image
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'jp.wasabeef:picasso-transformations:2.1.0'
+
+    // UI
+    implementation 'com.commit451:PhotoView:1.2.5'
+
 }

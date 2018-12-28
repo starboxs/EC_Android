@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/indexnews"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/navigation_indexnews" />
+    <item
+        android:id="@+id/service"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/navigation_service" />
+    <item
+        android:id="@+id/member"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/navigation_member" />
+
+    <!--<item-->
+    <!--android:id="@+id/moreItem"-->
+    <!--android:icon="@drawable/ic_explore"-->
+    <!--android:title="@string/more_navigation_title" />-->
+
+</menu>
