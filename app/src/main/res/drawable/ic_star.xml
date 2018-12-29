@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="31.7864222dp"
+    android:height="30.230684dp"
+    android:viewportWidth="31.7864222"
+    android:viewportHeight="30.230684">
+    <path
+        android:name="Star-Copy-4"
+        android:fillColor="#D8D8D8"
+        android:pathData="M 15.8932111 25.0666667 L 6.07066646 30.230684 L 7.94660556 19.2931198 L -0000000000000.787148124 11.5470938 L 10.9819388 9.95132467 L 15.8932111 0 L 20.8044834 9.95132467 L 31.7864222 11.5470938 L 23.8398167 19.2931198 L 25.7157558 30.230684 Z" />
+</vector>

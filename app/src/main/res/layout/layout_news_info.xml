@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E91E63"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:backgroundTint="#E91E63" />
+
+                <TextView
+                    android:id="@+id/viewPagerPageTextView"
+                    style="@style/body_text_white"
+                    tools:text="3/10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/viewPager"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@color/colorBlack54"
+                    android:padding="4dp"
+                    android:textSize="@dimen/text_caption" />
+
+                <!-- 如果沒有作品 -->
+
+                <TextView
+                    android:id="@+id/noCollectionTextView"
+                    style="@style/caption_text_black38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:background="@color/colorBg"
+                    android:padding="@dimen/content_padding"
+                    android:text="@string/no_collection" />
+
+                <!-- / 如果沒有作品 -->
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFEB3B" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

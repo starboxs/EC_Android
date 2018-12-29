@@ -6,6 +6,325 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/colorBlack54</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary38</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowBackground">@color/colorBg</item>
+        <item name="android:colorForeground">@color/colorBlack54</item>
+        <item name="drawerArrowStyle">@android:color/white</item>
+        <!--<item name="editTextStyle">@style/editText</item>-->
+        <item name="android:alertDialogTheme">@style/dialog_theme</item>
+    </style>
+
+    <style name="AppTheme_transparent" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/colorBlack54</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary38</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/background_dark</item>
+        <item name="android:colorForeground">@color/colorBlack54</item>
+        <item name="drawerArrowStyle">@android:color/white</item>
+        <!--<item name="editTextStyle">@style/editText</item>-->
+        <item name="android:alertDialogTheme">@style/dialog_theme</item>
+    </style>
+
+    <style name="appbar_transparent" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="drawerArrowStyle">@android:color/white</item>
+    </style>
+
+    <style name="dialog_theme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Alert Title Color -->
+        <item name="android:textColorPrimary">@color/colorBlack87</item>
+        <!-- Spinner Color -->
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/primary_color_state</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/primary_color_state</item>
+    </style>
+
+
+    <style name="editText">
+        <item name="android:textColorHint">@color/colorBlack54</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorBlack38</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_display</item>
+    </style>
+
+    <!-- Button -->
+
+    <style name="button_basic" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="button_basic.primary" parent="button_basic">
+        <item name="android:background">@drawable/selector_primary</item>
+    </style>
+
+    <style name="button_basic.accent" parent="button_basic">
+        <item name="android:background">@drawable/selector_accent</item>
+    </style>
+
+    <style name="button_basic.primary.radius" parent="button_basic">
+        <item name="android:background">@drawable/selector_primary_radius</item>
+    </style>
+
+    <style name="button_basic.white.border.radius" parent="button_basic">
+        <item name="android:background">@drawable/selector_border_white_radius</item>
+    </style>
+
+    <style name="button_basic.primary.border.radius" parent="button_basic">
+        <item name="android:background">@drawable/selector_border_primary_radius</item>
+        <item name="android:textColor">@color/primary_color_state</item>
+    </style>
+
+    <style name="button_basic.black87" parent="button_basic">
+        <item name="android:background">@drawable/selector_black87</item>
+    </style>
+
+    <style name="button_basic.white" parent="button_basic">
+        <item name="android:background">@drawable/selector_white</item>
+        <item name="android:textColor">@color/black87_text_color_state</item>
+    </style>
+
+    <style name="button_transparent" parent="button_basic">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/white_text_color_state</item>
+    </style>
+
+    <style name="radio_button">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="colorControlNormal">@color/colorBlack54</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:textColor">@color/radio_check_state</item>
+    </style>
+
+    <!-- Typography -->
+
+    <style name="paragraph">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_extra</item>
+        <item name="android:lineSpacingMultiplier">@string/line_height</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="text_headline">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+    </style>
+
+    <style name="text_headline.white" parent="text_headline">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="display">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+    </style>
+
+    <style name="display.black87">
+        <item name="android:textColor">@color/colorBlack87</item>
+    </style>
+
+    <style name="display.paragraph" parent="paragraph" />
+
+    <style name="display.paragraph.black87">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_display</item>
+    </style>
+
+    <style name="title">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+    </style>
+
+    <style name="text_title_black87">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_black54">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_black38">
+        <item name="android:textColor">@color/colorBlack38</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_primary">
+        <item name="android:textColor">@color/primary_color_state</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_primaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_paragraph_black54" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="text_title_paragraph_black87" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="body_text_black87">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_primary">
+        <item name="android:textColor">@color/primary_color_state</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_accent">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_black54">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_paragraph_black38" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack38</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_paragraph_black54" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="body_text_paragraph_black87" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="caption_text_black38">
+        <item name="android:textColor">@color/colorBlack38</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="caption_text_black87">
+        <item name="android:textColor">@color/colorBlack87</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="caption_text_primary">
+        <item name="android:textColor">@color/primary_color_state</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="caption_paragraph_black54" parent="paragraph">
+        <item name="android:textColor">@color/colorBlack54</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <style name="caption_text_white">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
+    <!-- Divider -->
+
+    <style name="divider_solid">
+        <item name="android:divider">@drawable/shape_divider</item>
+    </style>
+
+    <style name="divider_solid.middle">
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="divider_solid.end">
+        <item name="android:showDividers">middle|end</item>
+    </style>
+
+    <style name="divider_solid.both">
+        <item name="android:showDividers">middle|end|beginning</item>
+    </style>
+
+    <style name="divider_8dp">
+        <item name="android:divider">@drawable/shape_divider_transparent_8</item>
+        <item name="android:showDividers">middle|end|beginning</item>
+    </style>
+
+    <style name="divider_8dp.middle">
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="divider_16dp">
+        <item name="android:divider">@drawable/shape_divider_transparent_16</item>
+        <item name="android:showDividers">middle|end|beginning</item>
+    </style>
+
+    <style name="divider_16dp.middle">
+        <item name="android:divider">@drawable/shape_divider_transparent_16</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+
+    <!-- Custom --><style name="spinner">
+    <item name="android:paddingLeft">@dimen/content_padding</item>
+    <item name="android:textSize">@dimen/text_title</item>
+</style>
+
+    <style name="tag">
+        <item name="android:background">@drawable/shape_primary_radius</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="button_facebook" parent="button_basic">
+        <item name="android:background">@drawable/selector_white</item>
+        <item name="android:textColor">@color/fb_text_color_state</item>
     </style>
 
 </resources>

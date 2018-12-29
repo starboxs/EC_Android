@@ -1,9 +1,49 @@
 <resources>
-    <string name="app_name">EC_Android</string>
+    <string name="app_name">潔屋大師居家清潔</string>
 
     <!--navigation_item-->
     <string name="navigation_indexnews">消息</string>
     <string name="navigation_service">服務</string>
     <string name="navigation_member">會員</string>
+
+    <!-- ================================================
+                         STYLE
+ ================================================ -->
+
+    <string name="line_height" format="float" type="dimen">1.25</string>
+
+    <string name="no_collection">尚無作品</string>
+
+
+    <!--title-->
+    <string name="title_service_budget">填入你願意接案的最低金額</string>
+    <string name="title_line_id">填入 Line ID</string>
+    <string name="title_confirm">請再次確認你填寫的資料</string>
+    <string name="title_service_type_selector">選擇你的服務項目</string>
+    <string name="title_match_categories">接案類型</string>
+    <string name="title_edit_myprofile">修改我的簡介</string>
+    <string name="title_edit_my_personality">除了工作，你還有哪些興趣？</string>
+    <string name="title_register_flow">了解申請進度</string>
+    <string name="title_register_flow_description">成為裝修夥伴，你只需要完成5大步驟！</string>
+    <string name="title_archive">刪除</string>
+    <string name="title_unarchive">還原</string>
+    <string name="title_idphoto">提出申請證明</string>
+    <string name="title_report_deal">回報成交</string>
+    <string name="title_member_fee">年費介紹</string>
+    <string name="title_new_member_fee">了解 PULO 方案</string>
+    <string name="online_helper">線上幫手</string>
+    <string name="title_my_profile">我的簡介</string>
+    <string name="title_check_my_credit">點數記錄</string>
+    <string name="title_my_review">我的評價</string>
+    <string name="title_archive_list">回收區</string>
+    <string name="title_payment">購買點數</string>
+    <string name="title_edit">編輯</string>
+    <string name="title_my_project_not_reg">你還沒申請為裝修夥伴</string>
+    <string name="title_my_project_apply">我們正在處理你的申請資料</string>
+    <string name="title_match_project_not_reg">這裡是系統媒合案件區</string>
+    <string name="title_help">客服中心</string>
+    <string name="title_deal">喔耶！恭喜師傅成交</string>
+    <string name="title_my_description">特色優勢</string>
+
 
 </resources>

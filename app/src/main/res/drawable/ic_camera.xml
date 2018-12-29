@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="464dp"
+    android:height="442dp"
+    android:viewportWidth="464"
+    android:viewportHeight="442">
+
+    <group
+        android:translateX="-55.000000"
+        android:translateY="-723.000000">
+        <group
+            android:translateY="569.588647">
+            <group
+                android:translateX="55.000000"
+                android:translateY="154.000000">
+                <path
+                    android:fillColor="#EDEFF2"
+                    android:fillAlpha="0.01"
+                    android:fillType="evenOdd"
+                    android:strokeWidth="1"
+                    android:pathData="M 0.0000000000000313946985 0 H 463.575056 V 441 H 0.0000000000000313946985 V 0 Z" />
+                <group
+                    android:translateX="171.287528"
+                    android:translateY="166.000000">
+                    <path
+                        android:fillColor="#000000"
+                        android:fillAlpha="0.3"
+                        android:fillType="evenOdd"
+                        android:strokeWidth="1"
+                        android:pathData="M60.522,41.464 C71.124,41.464 79.722,50.059 79.722,60.664 C79.722,71.266
+71.124,79.864 60.522,79.864 C49.917,79.864 41.322,71.266 41.322,60.664
+C41.322,50.059 49.917,41.464 60.522,41.464" />
+                    <path
+                        android:fillColor="#000000"
+                        android:fillAlpha="0.3"
+                        android:fillType="evenOdd"
+                        android:strokeWidth="1"
+                        android:pathData="M42.522,0.664 L31.542,12.664 L12.522,12.664 C5.922,12.664 0.522,18.064
+0.522,24.664 L0.522,96.664 C0.522,103.264 5.922,108.664 12.522,108.664
+L108.522,108.664 C115.122,108.664 120.522,103.264 120.522,96.664 L120.522,24.664
+C120.522,18.064 115.122,12.664 108.522,12.664 L89.502,12.664 L78.522,0.664
+L42.522,0.664 L42.522,0.664 Z M60.522,90.664 C43.962,90.664 30.522,77.224
+30.522,60.664 C30.522,44.104 43.962,30.664 60.522,30.664 C77.082,30.664
+90.522,44.104 90.522,60.664 C90.522,77.224 77.082,90.664 60.522,90.664
+L60.522,90.664 Z" />
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--BASE COLORS-->
+    <color name="colorPrimary">#45AAF4</color>
+    <color name="colorPrimary87">#DE45AAF4</color>
+    <!--<color name="colorPrimaryDark">#3788c3</color>-->
+    <color name="colorPrimaryDark">#DEe04479</color>
+    <color name="colorAccent">#FF4E8A</color>
+    <color name="colorAccent87">#DEFF4E8A</color>
+    <color name="colorAccentDark">#DEe04479</color>
+    <color name="colorPrimary12">#1f45AAF4</color>
+
+    <!--TEXT COLOR-->
+    <color name="colorBlack87">#DE000000</color>
+    <color name="colorBlack54">#8a000000</color>
+    <color name="colorBlack38">#61000000</color>
+    <color name="colorBlack12">#1f000000</color>
+
+    <color name="colorWhite87">#DEFFFFFF</color>
+    <color name="colorWhite54">#8AFFFFFF</color>
+    <color name="colorWhite38">#61FFFFFF</color>
+
+    <!--CUSTOM COLORS-->
+    <color name="colorBg">#edeff2</color>
+    <color name="colorPrimary38">#6145AAF4</color>
+</resources>
+
