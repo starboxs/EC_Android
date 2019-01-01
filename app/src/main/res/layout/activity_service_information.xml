@@ -20,19 +20,8 @@
 
             <include
                 android:id="@+id/InfoLayout"
-                layout="@layout/layout_news_info" />
+                layout="@layout/layout_service_information" />
 
         </ScrollView>
     </LinearLayout>
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        app:itemBackground="@color/colorBlack87"
-        app:itemIconTint="@color/nav_item_color_state"
-        app:itemTextColor="@color/nav_item_color_state"
-        app:menu="@menu/navigation_items" />
-
 </LinearLayout>

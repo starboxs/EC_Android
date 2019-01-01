@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F44336"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/index_banner" />
+
+                <TextView
+                    android:id="@+id/viewPagerPageTextView"
+                    style="@style/body_text_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/viewPager"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:background="@color/colorBlack54"
+                    android:padding="4dp"
+                    android:textSize="@dimen/text_caption"
+                    tools:text="3/10" />
+
+                <!-- 如果沒有作品 -->
+
+                <!--<TextView-->
+                <!--android:id="@+id/noCollectionTextView"-->
+                <!--style="@style/caption_text_black38"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_centerVertical="false"-->
+                <!--android:background="@color/colorBg"-->
+                <!--android:padding="@dimen/content_padding"-->
+                <!--android:text="@string/no_collection"-->
+                />
+
+                <!-- / 如果沒有作品 -->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#03A9F4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/service_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="お蔭参りが流行した江戸時代、全国へ広がった伊勢音頭で「伊勢へ行きたい、伊勢路が見たい、せめて一生に一度でも」と歌われ、人々は伊勢への憧れを募らせました。その憧れと崇敬の心は、時代が経ても変わることはありません。現在も日本全国から多くの方が伊勢を訪れ、内宮と外宮を合わせると1年間に約800万人の方がお参りされます。" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="服務內容"
+                    tools:text="服務內容" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="略略略略略略略略略略略略"
+                    tools:text="略略略略略略略略略略略略" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="預約居家清潔" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

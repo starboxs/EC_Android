@@ -14,6 +14,7 @@ import com.example.marco.ec_android.utils.CustomProgressDialog;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+
 public class WebViewActivity extends AppCompatActivity {
 
     public static final String EXTRA_URL = WebViewActivity.class.getName() + ".EXTRA_URL";

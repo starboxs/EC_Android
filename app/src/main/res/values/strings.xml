@@ -15,6 +15,15 @@
     <string name="no_collection">尚無作品</string>
 
 
+    <!--MENU-->
+    <string name="service01">居家清潔</string>
+    <string name="service02">專業除蟎</string>
+    <string name="service03">水管淨化</string>
+    <string name="service04">冷氣機清洗</string>
+    <string name="service05">關於我們</string>
+    <string name="service06">尚無作品</string>
+
+
     <!--title-->
     <string name="title_service_budget">填入你願意接案的最低金額</string>
     <string name="title_line_id">填入 Line ID</string>
