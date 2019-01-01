@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提醒1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="這項法案表達美國國會支持台灣的堅定立場，獲得川普政府背書外，法案目的還有敦促美國行政部門研擬印太地區的長期戰略與原則政策，除強化美國與日本、澳洲及東南亞國家的安全與經濟合作，亦建立北韓和平非核化的政策。  關於美國對台承諾，法案內容載明，國會認為，美國總統應定期辦理對台出售防禦性武器；美國總統也應按照「台灣旅行法」，鼓勵美國高層官員訪台。" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提醒2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="另外，美國遵照台灣關係法、美中「三個公報」及前總統雷根任內的對台「六項保證」，確實履行對台承諾；美國反對改變現狀，支持以兩岸雙方都能接受的方式，和平解決爭議。  外交部在國會兩院通過時表示，對美國國會不分黨派展現對台美關係、區域和平穩定的支持重視，表達誠摯歡迎。  中國國台辦發言人馬曉光在眾院通過法案後則對外表示，美國會通過有關法案涉台內容，嚴重違反「一個中國原則」和中美三個聯合公報規定，中國對此堅決反對。" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
