@@ -88,7 +88,7 @@
                         android:layout_weight="1"
                         android:tag="@string/service01"
                         android:background="?android:attr/selectableItemBackground"
-                        android:drawableTop="@mipmap/ic_member_profile"
+                        android:drawableTop="@mipmap/a001"
                         android:drawablePadding="@dimen/content_padding"
                         android:gravity="center"
                         android:minHeight="@dimen/expand_row_height"
@@ -107,7 +107,7 @@
                         android:tag="@string/service02"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableTop="@mipmap/ic_member_record"
+                        android:drawableTop="@mipmap/a002"
                         android:drawablePadding="@dimen/content_padding"
                         android:gravity="center"
                         android:minHeight="@dimen/expand_row_height"
@@ -126,7 +126,7 @@
                         android:tag="@string/service03"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableTop="@mipmap/ic_member_payment"
+                        android:drawableTop="@mipmap/a003"
                         android:drawablePadding="@dimen/content_padding"
                         android:gravity="bottom|center_horizontal"
                         android:minHeight="@dimen/expand_row_height"
@@ -153,7 +153,7 @@
                         android:tag="@string/service04"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableTop="@mipmap/ic_member_reviews"
+                        android:drawableTop="@mipmap/a004"
                         android:drawablePadding="@dimen/content_padding"
                         android:gravity="center"
                         android:minHeight="@dimen/expand_row_height"
@@ -172,7 +172,7 @@
                         android:tag="@string/service05"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawableTop="@mipmap/ic_member_customer_service"
+                        android:drawableTop="@mipmap/a005"
                         android:drawablePadding="@dimen/content_padding"
                         android:gravity="center"
                         android:minHeight="@dimen/expand_row_height"
@@ -180,7 +180,7 @@
                         android:paddingTop="@dimen/member_button_padding"
                         android:paddingRight="@dimen/activity_horizontal_margin"
                         android:paddingBottom="@dimen/member_button_padding"
-                        android:text="@string/service05" />
+                        android:text="洗衣機清洗" />
 
                     <TextView
                         android:id="@+id/service06"
@@ -207,10 +207,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/newRecycleView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#4CAF50" />
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </LinearLayout>

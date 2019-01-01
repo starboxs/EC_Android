@@ -70,7 +70,6 @@ public class MainActivity extends CustomTabBaseActivity {
         RxFragment fragment = null;
         switch (item.getItemId()) {
             case R.id.indexnews:
-                System.out.println("頁面:1");
                 if (mFragmentManager != null) {
                     fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
                 }
@@ -78,7 +77,6 @@ public class MainActivity extends CustomTabBaseActivity {
                     fragment = mainNewsFragment.newInstance();
                 break;
             case R.id.service:
-                System.out.println("頁面:2");
                 if (mFragmentManager != null) {
                     fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
                 }
@@ -86,7 +84,6 @@ public class MainActivity extends CustomTabBaseActivity {
                     fragment = mainServiceFragment.newInstance();
                 break;
             case R.id.member:
-                System.out.println("頁面:3");
                 if (mFragmentManager != null) {
                     fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
                 }
@@ -96,12 +93,10 @@ public class MainActivity extends CustomTabBaseActivity {
         }
 
         if (fragment != null && mFragmentManager != null) {
-            System.out.println("頁面:4");
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.frame_layout, fragment);
             fragmentTransaction.commit();
         } else {
-            System.out.println("頁面:5");
             mFragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.frame_layout, mainNewsFragment.newInstance());

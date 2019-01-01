@@ -253,6 +253,11 @@
         <item name="android:textSize">@dimen/text_caption</item>
     </style>
 
+    <style name="caption_text_colorblackkkk">
+        <item name="android:textColor">@color/colorblackkkk</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+
     <style name="caption_text_primary">
         <item name="android:textColor">@color/primary_color_state</item>
         <item name="android:textSize">@dimen/text_caption</item>

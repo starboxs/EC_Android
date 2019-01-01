@@ -4,27 +4,38 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.example.marco.ec_android.adapter.newsAdapter;
+import com.example.marco.ec_android.adapter.serviceAdapter;
 import com.example.marco.ec_android.service.serviceInformationFragment;
 import com.example.marco.ec_android.R;
 import com.trello.rxlifecycle.components.RxFragment;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class mainNewsFragment extends RxFragment {
+public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemClickListener {
 
-    TextView service01 ;
-    TextView service02 ;
-    TextView service03 ;
-    TextView service04 ;
-    TextView service05 ;
+    TextView service01;
+    TextView service02;
+    TextView service03;
+    TextView service04;
+    TextView service05;
+    ScrollView mScrollView;
+    RecyclerView mNewsRecycleView;
     private FragmentManager mFragmentManager;
-
+    public newsAdapter mNewsAdapter;
+    ArrayList mNewsList;
 
     private OnFragmentInteractionListener listener;
 
@@ -43,61 +54,73 @@ public class mainNewsFragment extends RxFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_index, container, false);
         ButterKnife.bind(this, v);
+        mScrollView = (ScrollView) v.findViewById(R.id.indexScrollview);
         service01 = (TextView) v.findViewById(R.id.service01);
         service02 = (TextView) v.findViewById(R.id.service02);
         service03 = (TextView) v.findViewById(R.id.service03);
         service04 = (TextView) v.findViewById(R.id.service04);
         service05 = (TextView) v.findViewById(R.id.service05);
+        mNewsRecycleView = (RecyclerView) v.findViewById(R.id.newRecycleView);
+        mNewsRecycleView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        mNewsAdapter = new newsAdapter(this.getActivity());
+        mNewsAdapter.setOnItemClickListener(this);
+        mNewsList = new ArrayList<>();
+        mNewsRecycleView.setAdapter(mNewsAdapter);
+        mNewsRecycleView.scrollBy(0,0);
         service01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RxFragment fragment = null;
-
-                System.out.println("按下1:");
-//                fragment = (RxFragment) mFragmentManager.findFragmentByTag(serviceInformationFragment.class.getSimpleName());
-
                 fragment = serviceInformationFragment.newInstance();
-
-
-                if (fragment != null && mFragmentManager != null) {
-                    System.out.println("按下:4");
-                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout, fragment);
-                    fragmentTransaction.commit();
-                } else {
-                    System.out.println("按下:5");
-                    mFragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout, serviceInformationFragment.newInstance());
-                    fragmentTransaction.commit();
-                }
+                fragmentChack(fragment);
             }
         });
         service02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("按下1:" +v.getTag());
+                RxFragment fragment = null;
+                fragment = serviceInformationFragment.newInstance();
+                fragmentChack(fragment);
             }
         });
         service03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("按下1:" +v.getTag());
+                RxFragment fragment = null;
+                fragment = serviceInformationFragment.newInstance();
+                fragmentChack(fragment);
             }
         });
         service04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("按下1:" +v.getTag());
+                RxFragment fragment = null;
+                fragment = serviceInformationFragment.newInstance();
+                fragmentChack(fragment);
             }
         });
         service05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("按下1:" +v.getTag());
+                RxFragment fragment = null;
+                fragment = serviceInformationFragment.newInstance();
+                fragmentChack(fragment);
             }
         });
         return v;
+    }
+
+    private void fragmentChack(RxFragment fragment) {
+        if (fragment != null && mFragmentManager != null) {
+            FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame_layout, fragment);
+            fragmentTransaction.commit();
+        } else {
+            mFragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame_layout, serviceInformationFragment.newInstance());
+            fragmentTransaction.commit();
+        }
     }
 
     @Override
@@ -122,9 +145,9 @@ public class mainNewsFragment extends RxFragment {
         super.onDestroyView();
     }
 
-    @OnClick({R.id.service01, R.id.service02, R.id.service03, R.id.service04, R.id.service05})
-    public void myTextViewClick(TextView view) {
-        System.out.println("按下:" +view);
+    @Override
+    public void onItemClick(int position) {
+
     }
 
     public interface OnFragmentInteractionListener {
