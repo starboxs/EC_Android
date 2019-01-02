@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -16,7 +15,7 @@ import com.example.marco.ec_android.service.mainServiceFragment;
 import com.example.marco.ec_android.utils.CustomTabBaseActivity;
 import com.trello.rxlifecycle.components.RxFragment;
 
-public class MainActivity extends CustomTabBaseActivity {
+public class MainActivity extends CustomTabBaseActivity implements mainNewsFragment.OnFragmentInteractionListener, mainServiceFragment.OnFragmentInteractionListener {
     public static final String EXTRA_SELECT_PAGE = "EXTRA_SELECT_PAGE";
     public static final String EXTRA_OPEN_REGISTER_FLOW = "EXTRA_OPEN_REGISTER_FLOW";
     private FragmentManager mFragmentManager;

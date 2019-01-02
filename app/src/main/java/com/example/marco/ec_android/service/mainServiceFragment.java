@@ -1,12 +1,14 @@
 package com.example.marco.ec_android.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.marco.ec_android.R;
 import com.example.marco.ec_android.adapter.serviceAdapter;
@@ -16,13 +18,17 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class mainServiceFragment extends RxFragment implements serviceAdapter.OnItemClickListener {
 
-    private mainServiceFragment.OnFragmentInteractionListener listener;
     public serviceAdapter mServiceAdapter;
     RecyclerView mServiceRecyclerView;
     ArrayList mServiceList;
+    @Bind(R.id.btnService1000)
+    Button mbtnService1000;
+    private mainServiceFragment.OnFragmentInteractionListener listener;
+
     public static mainServiceFragment newInstance() {
         return new mainServiceFragment();
     }
@@ -37,12 +43,23 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_service_clean_list, container, false);
         ButterKnife.bind(this, v);
+        mbtnService1000 = (Button) v.findViewById(R.id.btnService1000);
         mServiceRecyclerView = (RecyclerView) v.findViewById(R.id.serviceRecyclerView);
         mServiceRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         mServiceAdapter = new serviceAdapter(this.getActivity());
         mServiceAdapter.setOnItemClickListener(this);
+
         mServiceList = new ArrayList<>();
         mServiceRecyclerView.setAdapter(mServiceAdapter);
+        mbtnService1000.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
+//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
+                intent.putExtra("ServiceType", "1000");
+                startActivity(intent);
+            }
+        });
         return v;
     }
 
@@ -71,6 +88,16 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
     @Override
     public void onItemClick(int position) {
 
+    }
+
+    @OnClick(R.id.btnService1000)
+    public void OnClickService1000() {
+        //開新頁到發案
+
+        Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
+//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
+        intent.putExtra("ServiceType", "1000");
+        startActivity(intent);
     }
 
     public interface OnFragmentInteractionListener {
