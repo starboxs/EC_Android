@@ -21,12 +21,12 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public newsAdapter(Context context) {
         this.mContext = context;
-        mNewsList.add("重大消息1");
-        mNewsList.add("重大消息2");
-        mNewsList.add("重大消息3");
-        mNewsDecList.add("內容1");
-        mNewsDecList.add("內容2");
-        mNewsDecList.add("內容3");
+        mNewsList.add("購買二手屋，請問這裂縫有危險嗎？");
+        mNewsList.add("小家庭客廳坪數不大的沙發選擇?");
+        mNewsList.add("寢之堡防螨床包材質的差別？");
+        mNewsDecList.add("早年有很多房子都是建物完成後 ，地方政府驗過後 ，再做整體的二次施工把陽台外推或頂樓加蓋");
+        mNewsDecList.add("主要是變化性很多，除了一般的雙、三人座沙發還可以組成小L型的，外面比較少見到所以看到時挺驚豔的");
+        mNewsDecList.add("店員推薦竹纖維材質比較天然，睡起來也很舒服");
     }
 
     public void setOnItemClickListener(newsAdapter.OnItemClickListener onItemClickListener) {

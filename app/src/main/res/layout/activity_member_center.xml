@@ -22,7 +22,7 @@
                 android:id="@+id/avatarImageView"
                 android:layout_width="@dimen/avatar"
                 android:layout_height="@dimen/avatar"
-                android:src="@mipmap/img_empty_avatar" />
+                android:src="@mipmap/avatar01" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -36,39 +36,31 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/nameTextView"
-                        style="@style/display.paragraph.black87"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        tools:text="周星星同學" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nameTextView"
+                            style="@style/display.paragraph.black87"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="周星星同學" />
+                    </LinearLayout>
 
                     <LinearLayout
-                        style="@style/divider_8dp.middle"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/allReviewTextView"
-                            style="@style/caption_text_black38"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            tools:text="假字 (12)" />
-
-                        <TextView
-                            android:id="@+id/joinDqpaTextView"
-                            style="@style/tag"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/content_padding"
-                            android:text="優質屋主" />
-
+                            android:text="www.觀音罵.com.tw" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -80,14 +72,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:background="#ffffff"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="預約項目"
-                tools:text="預約項目" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="預約項目"
+                    android:textSize="20sp"
+                    tools:text="預約項目" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -7,9 +7,9 @@
     android:background="@color/colorBg"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/appbar"
-        layout="@layout/appbar" />
+    <!--<include-->
+        <!--android:id="@+id/appbar"-->
+        <!--layout="@layout/appbar" />-->
 
     <FrameLayout
         android:id="@+id/frame_layout"

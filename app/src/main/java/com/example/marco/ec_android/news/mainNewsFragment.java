@@ -106,6 +106,7 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
                 fragmentChack(fragment);
             }
         });
+        mScrollView.smoothScrollBy(0,20);
         return v;
     }
 
