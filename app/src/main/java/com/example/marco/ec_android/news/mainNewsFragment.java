@@ -66,7 +66,6 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
         mNewsAdapter.setOnItemClickListener(this);
         mNewsList = new ArrayList<>();
         mNewsRecycleView.setAdapter(mNewsAdapter);
-        mNewsRecycleView.scrollBy(0,0);
         service01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

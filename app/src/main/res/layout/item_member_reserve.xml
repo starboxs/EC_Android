@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        style="@style/divider_16dp.middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="@dimen/avatar"
+            android:layout_height="@dimen/avatar"
+            android:src="@mipmap/img_empty_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/member_titile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="居家清潔服務" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/memeber_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="項目：2為服務管家" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/divider_8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/member_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="位置：高雄市左營區" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/member_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="預約中" />
+    </LinearLayout>
+
+</LinearLayout>

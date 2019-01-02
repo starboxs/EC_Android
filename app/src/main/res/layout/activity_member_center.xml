@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        tools:text="假字 許永富 (永富哥葛)" />
+                        tools:text="周星星同學" />
 
                     <LinearLayout
                         style="@style/divider_8dp.middle"
@@ -67,7 +67,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="@dimen/content_padding"
-                            android:text="假字" />
+                            android:text="優質屋主" />
 
                     </LinearLayout>
 
@@ -86,16 +86,17 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="預約項目"
                 tools:text="預約項目" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
+                    android:id="@+id/memberRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
