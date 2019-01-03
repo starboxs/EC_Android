@@ -1,6 +1,7 @@
 package com.example.marco.ec_android.adapter;
 
 import android.content.Context;
+import android.media.SoundPool;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,11 +40,20 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return new ViewHolder(v.inflate(R.layout.item_news, viewGroup, false));
     }
 
+
+
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, final int i) {
         ((ViewHolder) viewHolder).newsTitle.setText(mNewsList.get(i).toString());
-        System.out.println("數字:" + i);
         ((ViewHolder) viewHolder).newsDesc.setText(mNewsDecList.get(i).toString());
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(i);
+                }
+            }
+        });
     }
 
     public interface OnItemClickListener {

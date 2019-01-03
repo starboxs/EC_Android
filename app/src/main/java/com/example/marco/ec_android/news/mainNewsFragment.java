@@ -106,7 +106,7 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
                 fragmentChack(fragment);
             }
         });
-        mScrollView.smoothScrollBy(0,20);
+        mScrollView.smoothScrollBy(0, 20);
         return v;
     }
 
@@ -118,7 +118,8 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
         } else {
             mFragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frame_layout, serviceInformationFragment.newInstance());
+            fragmentTransaction.replace(R.id.frame_layout, fragment);
+
             fragmentTransaction.commit();
         }
     }
@@ -147,7 +148,9 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
 
     @Override
     public void onItemClick(int position) {
-
+        RxFragment fragment = null;
+        fragment = newsInformationFragment.newInstance();
+        fragmentChack(fragment);
     }
 
     public interface OnFragmentInteractionListener {
