@@ -4,6 +4,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="8dp"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,4 +85,10 @@
                 android:text="另外，美國遵照台灣關係法、美中「三個公報」及前總統雷根任內的對台「六項保證」，確實履行對台承諾；美國反對改變現狀，支持以兩岸雙方都能接受的方式，和平解決爭議。  外交部在國會兩院通過時表示，對美國國會不分黨派展現對台美關係、區域和平穩定的支持重視，表達誠摯歡迎。  中國國台辦發言人馬曉光在眾院通過法案後則對外表示，美國會通過有關法案涉台內容，嚴重違反「一個中國原則」和中美三個聯合公報規定，中國對此堅決反對。" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認預約" />
 </LinearLayout>

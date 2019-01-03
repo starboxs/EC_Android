@@ -18,11 +18,12 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 
 public class memberCenterFragment extends RxFragment implements memberAdapter.OnItemClickListener {
-    private memberCenterFragment.OnFragmentInteractionListener listener;
-    RecyclerView mMemberCenterRecycleView;
-    private FragmentManager mFragmentManager;
     public memberAdapter mMemberAdapter;
+    RecyclerView mMemberCenterRecycleView;
     ArrayList mNewsList;
+    private memberCenterFragment.OnFragmentInteractionListener listener;
+    private FragmentManager mFragmentManager;
+
     public static memberCenterFragment newInstance() {
         return new memberCenterFragment();
     }

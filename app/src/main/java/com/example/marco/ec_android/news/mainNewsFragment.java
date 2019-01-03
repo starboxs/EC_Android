@@ -12,20 +12,18 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.example.marco.ec_android.adapter.newsAdapter;
-import com.example.marco.ec_android.adapter.serviceAdapter;
-import com.example.marco.ec_android.service.serviceInformationFragment;
 import com.example.marco.ec_android.R;
+import com.example.marco.ec_android.adapter.newsAdapter;
+import com.example.marco.ec_android.service.serviceInformationFragment;
 import com.trello.rxlifecycle.components.RxFragment;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemClickListener {
 
+    public newsAdapter mNewsAdapter;
     TextView service01;
     TextView service02;
     TextView service03;
@@ -33,10 +31,8 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
     TextView service05;
     ScrollView mScrollView;
     RecyclerView mNewsRecycleView;
-    private FragmentManager mFragmentManager;
-    public newsAdapter mNewsAdapter;
     ArrayList mNewsList;
-
+    private FragmentManager mFragmentManager;
     private OnFragmentInteractionListener listener;
 
     public static mainNewsFragment newInstance() {
@@ -106,7 +102,7 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
                 fragmentChack(fragment);
             }
         });
-        mScrollView.smoothScrollBy(0,20);
+        mScrollView.smoothScrollBy(0, 20);
         return v;
     }
 

@@ -9,12 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.marco.ec_android.R;
-import com.example.marco.ec_android.service.serviceInformationFragment;
 import com.trello.rxlifecycle.components.RxFragment;
 
 import butterknife.ButterKnife;
 
-public class mainMemberFragment extends RxFragment {
+public class mainMemberFragment extends RxFragment implements memberCenterFragment.OnFragmentInteractionListener {
 
     private FragmentManager mFragmentManager;
 
