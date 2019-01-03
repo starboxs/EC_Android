@@ -1,5 +1,7 @@
 package com.example.marco.ec_android.service;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
     public serviceAdapter mServiceAdapter;
     RecyclerView mServiceRecyclerView;
     ArrayList mServiceList;
+    private FragmentManager mFragmentManager;
     private mainServiceFragment.OnFragmentInteractionListener listener;
 
     public static mainServiceFragment newInstance() {
@@ -75,10 +78,28 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
-//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
-        intent.putExtra("ServiceType", "1000");
-        startActivity(intent);
+        RxFragment fragment = null;
+        fragment = serviceInformationFragment.newInstance();
+        fragmentChack(fragment);
+
+//        Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
+////        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
+//        intent.putExtra("ServiceType", "1000");
+//        startActivity(intent);
+    }
+
+    private void fragmentChack(RxFragment fragment) {
+        if (fragment != null && mFragmentManager != null) {
+            FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame_layout, fragment);
+            fragmentTransaction.commit();
+        } else {
+            mFragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame_layout, fragment);
+
+            fragmentTransaction.commit();
+        }
     }
 
     public interface OnFragmentInteractionListener {
