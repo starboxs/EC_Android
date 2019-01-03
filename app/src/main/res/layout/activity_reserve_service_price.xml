@@ -37,7 +37,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="服務項目與價格"
                 tools:text="服務項目與價格" />
         </LinearLayout>
 
@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
+                android:inputType="number"
                 android:maxLines="1" />
         </LinearLayout>
     </LinearLayout>

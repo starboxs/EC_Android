@@ -81,6 +81,7 @@
             android:orientation="vertical">
 
             <RadioGroup
+                android:id="@+id/rgInvoiceType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -89,21 +90,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="RadioButton" />
+                    android:text="二聯發票" />
 
                 <RadioButton
                     android:id="@+id/radioButton6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="RadioButton" />
+                    android:text="三聯發票" />
 
                 <RadioButton
                     android:id="@+id/radioButton7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="RadioButton" />
+                    android:text="載具發票" />
             </RadioGroup>
         </LinearLayout>
     </LinearLayout>
@@ -128,7 +129,7 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="關務署台北關調查，這9起案件中，1名美國籍旅客攜帶豬肉腸之泡麵共3.6公斤，遭裁罰20萬元；另4名中國籍旅客分別攜帶火腿腸共0.61公斤、0.2公斤和.6公斤的雞仔餅（含豬肉）及鴨肉、0.61公斤的豬肉腿和0.5公斤豬肉火腿腸、牛肚、牛肉包；還有4名台灣籍旅客分別攜帶0.7公斤的肉鬆蛋捲（含豬肉）、0.085公斤的雞塊、豬肉燒餅0.92公斤和鴨肉製品3.9公斤。海關分別依豬肉製品裁罰20萬元、鴨肉製品裁罰3萬元、牛肉製品裁罰3萬元。" />
+                android:text="電子發票開立後會寄到您的電子信箱。\n二聯式發票系統自動為您兌獎，中獎後將email 通知您，並掛號寄出紙本發票。\n提醒您，個人戶(二聯)電子發票一旦開立，不得任意更改或改開公司戶(三聯式)發票。" />
 
         </LinearLayout>
 

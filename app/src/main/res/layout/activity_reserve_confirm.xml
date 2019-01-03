@@ -21,10 +21,23 @@
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     </android.support.design.widget.AppBarLayout>
 
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認預約" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,10 +50,65 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/tvTitile1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="提醒1" />
+                android:text="服務項目" />
+
+            <TextView
+                android:id="@+id/tvServiceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="總金額" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/tvTitle4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="服務時段" />
+
+            <TextView
+                android:id="@+id/tvServiceTimeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTitle5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="發票" />
+
+            <TextView
+                android:id="@+id/tvInvoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTitle3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="聯絡資訊" />
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -52,7 +120,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="這項法案表達美國國會支持台灣的堅定立場，獲得川普政府背書外，法案目的還有敦促美國行政部門研擬印太地區的長期戰略與原則政策，除強化美國與日本、澳洲及東南亞國家的安全與經濟合作，亦建立北韓和平非核化的政策。  關於美國對台承諾，法案內容載明，國會認為，美國總統應定期辦理對台出售防禦性武器；美國總統也應按照「台灣旅行法」，鼓勵美國高層官員訪台。" />
+                android:text="【提醒】請盡速於服務前二個工作天內進行付款，系統將依預約及付款之訂單順序進行媒合管家的流程，如您未於您所期望服務之時間前二日繳款，本次預約將自動失效，如需服務，請再次預約，感謝您的配合！" />
         </LinearLayout>
     </LinearLayout>
 
@@ -82,13 +150,12 @@
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="另外，美國遵照台灣關係法、美中「三個公報」及前總統雷根任內的對台「六項保證」，確實履行對台承諾；美國反對改變現狀，支持以兩岸雙方都能接受的方式，和平解決爭議。  外交部在國會兩院通過時表示，對美國國會不分黨派展現對台美關係、區域和平穩定的支持重視，表達誠摯歡迎。  中國國台辦發言人馬曉光在眾院通過法案後則對外表示，美國會通過有關法案涉台內容，嚴重違反「一個中國原則」和中美三個聯合公報規定，中國對此堅決反對。" />
+                android:text="【提醒】取消或變更服務將酌收手續費，說明如下:
+/n服務前一日18點後，取消或更改服務時間，將酌收整體費用30%。
+/n於服務時間開始後，要求取消或更改服務時間，將酌收整體服務費用50%。
+/n除上述時間外，取消服務退款將酌收整體費用5%為金流手續費用。" />
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="確認預約" />
+
 </LinearLayout>
