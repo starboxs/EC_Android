@@ -28,6 +28,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".service.serviceStep1Activity"></activity>
+        <activity android:name=".service.serviceStep2Activity"></activity>
+        <activity android:name=".service.serviceStep3Activity"></activity>
+        <activity android:name=".service.serviceConfirmActivity"></activity>
 
     </application>
 
