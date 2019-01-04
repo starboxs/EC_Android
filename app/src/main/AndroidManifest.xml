@@ -27,10 +27,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".service.serviceStep1Activity"></activity>
-        <activity android:name=".service.serviceStep2Activity"></activity>
-        <activity android:name=".service.serviceStep3Activity"></activity>
-        <activity android:name=".service.serviceConfirmActivity"></activity>
+        <activity android:name=".service.serviceStep1Activity"
+            android:screenOrientation="portrait">></activity>
+        <activity android:name=".service.serviceStep2Activity"
+            android:screenOrientation="portrait">></activity>
+        <activity android:name=".service.serviceStep3Activity"
+            android:screenOrientation="portrait">></activity>
+        <activity android:name=".service.serviceConfirmActivity"
+            android:screenOrientation="portrait">></activity>
 
     </application>
 

@@ -24,31 +24,239 @@
     <ScrollView
         android:id="@+id/indexScrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvDesc"
+                    android:id="@+id/tvTitile1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text="服務項目"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="聯絡資訊"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/confirm_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:text="姓名：周星星"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/confirm_tel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:text="電話：090000000"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/confirm_mail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:text="信箱：www.mail.com.tw"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/confirm_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:text="地址：中國台北高雄市"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvUser"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTitle4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="服務時段"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvServiceTimeType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTitle5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="發票格式"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvInvoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvServiceType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#2196F3"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvTitle2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:gravity="bottom"
+                                        android:text="總金額："
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvAmount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text=""
+                                        android:textColor="#E91E63"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"></LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -56,65 +264,45 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvTitile1"
+                        android:id="@+id/textView26"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="服務項目" />
+                        android:text="【提醒】"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvServiceType"
+                        android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="" />
+                        android:text="取消或變更服務將酌收手續費，說明如下: /n服務前一日18點後，取消或更改服務時間，將酌收整體費用30%。 /n於服務時間開始後，要求取消或更改服務時間，將酌收整體服務費用50%。 /n除上述時間外，取消服務退款將酌收整體費用5%為金流手續費用。"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvTitle2"
+                        android:id="@+id/textView27"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="總金額" />
-
-                    <TextView
-                        android:id="@+id/tvAmount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-
-                    <TextView
-                        android:id="@+id/tvTitle4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="服務時段" />
-
-                    <TextView
-                        android:id="@+id/tvServiceTimeType"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-                    <TextView
-                        android:id="@+id/tvTitle5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="發票" />
-
-                    <TextView
-                        android:id="@+id/tvInvoice"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-                    <TextView
-                        android:id="@+id/tvTitle3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="聯絡資訊" />
-
-                    <TextView
-                        android:id="@+id/tvUser"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="" />
+                        android:text="【提醒】"
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -126,25 +314,9 @@
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="【提醒】請盡速於服務前二個工作天內進行付款，系統將依預約及付款之訂單順序進行媒合管家的流程，如您未於您所期望服務之時間前二日繳款，本次預約將自動失效，如需服務，請再次預約，感謝您的配合！"
-                        android:textStyle="bold" />
+                        android:text="請盡速於服務前二個工作天內進行付款，系統將依預約及付款之訂單順序進行媒合管家的流程，如您未於您所期望服務之時間前二日繳款，本次預約將自動失效，如需服務，請再次預約，感謝您的配合！"
+                        android:textStyle="normal" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="【提醒】取消或變更服務將酌收手續費，說明如下:
-/n服務前一日18點後，取消或更改服務時間，將酌收整體費用30%。
-/n於服務時間開始後，要求取消或更改服務時間，將酌收整體服務費用50%。
-/n除上述時間外，取消服務退款將酌收整體費用5%為金流手續費用。"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 
