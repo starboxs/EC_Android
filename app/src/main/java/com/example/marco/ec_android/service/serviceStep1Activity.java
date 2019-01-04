@@ -11,8 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.marco.ec_android.MainActivity;
+import com.example.marco.ec_android.Conf;
 import com.example.marco.ec_android.R;
+import com.example.marco.ec_android.api.models.Project;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -39,20 +40,13 @@ public class serviceStep1Activity extends RxAppCompatActivity {
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent();
-                i.setClass(serviceStep1Activity.this, MainActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                        | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                i.putExtra(MainActivity.EXTRA_SELECT_PAGE, 2);
-                startActivity(i);
-
                 finish();
-//                Intent intent = new Intent(serviceStep1Activity.this, serviceStep2Activity.class);
-//                Project p = Conf.GetProject();
-//                p.serviceType = mServiceType;
-//                p.unit = mEdTextUnit.getText().toString();
-//                Conf.setProject(p);
-//                startActivity(intent);
+                Intent intent = new Intent(serviceStep1Activity.this, serviceStep2Activity.class);
+                Project p = Conf.GetProject();
+                p.serviceType = mServiceType;
+                p.unit = mEdTextUnit.getText().toString();
+                Conf.setProject(p);
+                startActivity(intent);
             }
         });
 
