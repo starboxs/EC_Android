@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,33 +50,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="你不是過敏，是沒除霾"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/service_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="お蔭参りが流行した江戸時代、全国へ広がった伊勢音頭で「伊勢へ行きたい、伊勢路が見たい、せめて一生に一度でも」と歌われ、人々は伊勢への憧れを募らせました。その憧れと崇敬の心は、時代が経ても変わることはありません。現在も日本全国から多くの方が伊勢を訪れ、内宮と外宮を合わせると1年間に約800万人の方がお参りされます。" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:background="@android:color/darker_gray"
-            ></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,6 +73,11 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"></LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -108,7 +85,7 @@
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:text="略略略略略略略略略略略略"
