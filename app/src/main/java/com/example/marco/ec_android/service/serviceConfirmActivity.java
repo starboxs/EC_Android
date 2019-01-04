@@ -33,7 +33,10 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
     public TextView mTvAmount;
     public TextView mTvServiceTimeType;
     public TextView mTvInvoiceType;
-    public TextView mTvUser;
+    public TextView mTvconfirm_name;
+    public TextView mTvConfirm_tel;
+    public TextView mTvConfirm_mail;
+    public TextView mTvConfirm_address;
     private ActionBar mActionBar;
     private CustomProgressDialog mProgressDialog;
 
@@ -48,13 +51,15 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
         mTvServiceType = this.findViewById(R.id.tvServiceType);
         mTvAmount = this.findViewById(R.id.tvAmount);
         mTvInvoiceType = this.findViewById(R.id.tvInvoice);
-        mTvUser = this.findViewById(R.id.tvUser);
         mBtnNext = this.findViewById(R.id.btnNext);
+        mTvconfirm_name = this.findViewById(R.id.confirm_name);
+        mTvConfirm_tel = this.findViewById(R.id.confirm_tel);
+        mTvConfirm_mail = this.findViewById(R.id.confirm_mail);
+        mTvConfirm_address = this.findViewById(R.id.confirm_address);
         mProgressDialog = new CustomProgressDialog(this);
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  TODO               回主頁到我的
                 mProgressDialog.show();
                 Project p = Conf.GetProject();
                 User u = Conf.GetUser();
@@ -197,14 +202,13 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
                 break;
         }
 
-        userInfo = "姓名:" + p.userName + "\n"
-                + "電話:" + p.userPhone + "\n"
-                + "Email:" + p.userEmail + "\n"
-                + "服務地址:" + p.userAddress + "\n";
         mTvServiceType.setText(serviceTypeName);
         mTvAmount.setText(String.valueOf(amount));
         mTvServiceTimeType.setText(serviceTimeTypeName);
         mTvInvoiceType.setText(invoiceTypeName);
-        mTvUser.setText(userInfo);
+        mTvconfirm_name.setText("姓名:" + p.userName);
+        mTvConfirm_tel.setText("電話:" + p.userPhone);
+        mTvConfirm_mail.setText("Email:" + p.userEmail);
+        mTvConfirm_address.setText("服務地址:" + p.userAddress);
     }
 }

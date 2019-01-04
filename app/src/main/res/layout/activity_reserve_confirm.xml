@@ -129,13 +129,6 @@
                                     android:text="地址：中國台北高雄市"
                                     android:textSize="16dp" />
                             </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/tvUser"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text=""
-                                android:visibility="gone" />
                         </LinearLayout>
 
                         <TextView
