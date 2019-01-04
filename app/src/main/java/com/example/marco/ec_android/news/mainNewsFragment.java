@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.example.marco.ec_android.Conf;
 import com.example.marco.ec_android.R;
 import com.example.marco.ec_android.adapter.newsAdapter;
+import com.example.marco.ec_android.api.models.Project;
 import com.example.marco.ec_android.service.serviceInformationFragment;
 import com.trello.rxlifecycle.components.RxFragment;
 
@@ -65,40 +67,60 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
         service01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxFragment fragment = null;
+                serviceInformationFragment fragment = null;
                 fragment = serviceInformationFragment.newInstance();
+                Project p = Conf.GetProject();
+                p.serviceType = String.valueOf(1001);
+                fragment.mServiceType = p.serviceType;
+                Conf.setProject(p);
                 fragmentChack(fragment);
             }
         });
         service02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxFragment fragment = null;
+                serviceInformationFragment fragment = null;
                 fragment = serviceInformationFragment.newInstance();
+                Project p = Conf.GetProject();
+                p.serviceType = String.valueOf(1002);
+                fragment.mServiceType = p.serviceType;
+                Conf.setProject(p);
                 fragmentChack(fragment);
             }
         });
         service03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxFragment fragment = null;
+                serviceInformationFragment fragment = null;
                 fragment = serviceInformationFragment.newInstance();
+                Project p = Conf.GetProject();
+                p.serviceType = String.valueOf(1002);
+                fragment.mServiceType = p.serviceType;
+                Conf.setProject(p);
                 fragmentChack(fragment);
             }
         });
         service04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxFragment fragment = null;
+                serviceInformationFragment fragment = null;
                 fragment = serviceInformationFragment.newInstance();
+                Project p = Conf.GetProject();
+                p.serviceType = String.valueOf(1002);
+                fragment.mServiceType = p.serviceType;
+                Conf.setProject(p);
                 fragmentChack(fragment);
             }
         });
         service05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxFragment fragment = null;
+                serviceInformationFragment fragment = null;
                 fragment = serviceInformationFragment.newInstance();
+                Project p = Conf.GetProject();
+                p.serviceType = String.valueOf(1002);
+                fragment.mServiceType = p.serviceType;
+                Conf.setProject(p);
                 fragmentChack(fragment);
             }
         });

@@ -60,6 +60,7 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
             }
         });
         if (mServiceType.equals("1000")) {
+            mNewsReserviceBtn.setText("預約居家清潔");
             desc = "<p dir=\"ltr\">\n" +
                     "    居家清潔\n" +
                     "</p>\n" +
@@ -257,6 +258,7 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
                     "    </li>\n" +
                     "</ul>";
         } else {
+            mNewsReserviceBtn.setText("預約専業除蟎");
             desc = "<p dir=\"ltr\">\n" +
                     "    專業除螨\n" +
                     "</p>\n" +
