@@ -1,6 +1,7 @@
 package com.example.marco.ec_android.service;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.marco.ec_android.Conf;
+import com.example.marco.ec_android.MainActivity;
 import com.example.marco.ec_android.R;
 import com.example.marco.ec_android.api.Api;
 import com.example.marco.ec_android.api.models.ApiResponse;
@@ -88,8 +90,8 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
                                 };
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(serviceConfirmActivity.this, R.style.dialog_theme);
                                 builder.setTitle("系統訊息")
-                                        .setMessage("預約成功囉！")
-                                        .setNegativeButton("好", okListener)
+                                        .setMessage("你沒連網路吧～")
+                                        .setNegativeButton("我去連", okListener)
                                         .setCancelable(false)
                                         .show();
                             }
@@ -106,6 +108,25 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
 
     private void handleCreateProject(ApiResponse apiResponse) {
         ApiResponse response = apiResponse;
+        DialogInterface.OnClickListener okListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent i = new Intent();
+                i.setClass(serviceConfirmActivity.this, MainActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                        | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                i.putExtra(MainActivity.EXTRA_SELECT_PAGE, 2);
+                startActivity(i);
+                finish();
+            }
+        };
+        final AlertDialog.Builder builder = new AlertDialog.Builder(serviceConfirmActivity.this, R.style.dialog_theme);
+        builder.setTitle("系統訊息")
+                .setMessage("預約成功囉！")
+                .setNegativeButton("好", okListener)
+                .setCancelable(false)
+                .show();
     }
 
     @Override

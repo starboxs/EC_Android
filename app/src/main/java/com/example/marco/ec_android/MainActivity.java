@@ -1,5 +1,6 @@
 package com.example.marco.ec_android;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -23,12 +24,15 @@ public class MainActivity extends CustomTabBaseActivity implements mainNewsFragm
     private FragmentManager mFragmentManager;
     private BottomNavigationView mBottomNavigationView;
     private int mSelectPage;
-    private String mOpenRegisterFlow;
+
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         setInitData();
     }
 
@@ -46,16 +50,12 @@ public class MainActivity extends CustomTabBaseActivity implements mainNewsFragm
 
         if (intent != null) {
             mSelectPage = intent.getIntExtra(MainActivity.EXTRA_SELECT_PAGE, 0);
-            mOpenRegisterFlow = intent.getStringExtra(MainActivity.EXTRA_OPEN_REGISTER_FLOW);
             Menu menu = mBottomNavigationView.getMenu();
             MenuItem item = menu.getItem(mSelectPage);
             updateNavigationBarState(item.getItemId());
             handleBottomNavigationItemSelected(item);
         }
-//        if (!TextUtils.isEmpty(mOpenRegisterFlow)) {
-//            Intent i = new Intent(MainActivity.this, main.class);
-//            startActivity(i);
-//        }
+
     }
 
     private void updateNavigationBarState(int actionId) {
@@ -69,24 +69,33 @@ public class MainActivity extends CustomTabBaseActivity implements mainNewsFragm
 
     private void handleBottomNavigationItemSelected(MenuItem item) {
         RxFragment fragment = null;
+        RxFragment fragmentHide1 = null;
+        RxFragment fragmentHide2 = null;
         switch (item.getItemId()) {
             case R.id.indexnews:
                 if (mFragmentManager != null) {
                     fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
+                    fragmentHide1 = (RxFragment) mFragmentManager.findFragmentByTag(mainServiceFragment.class.getSimpleName());
+                    fragmentHide2 = (RxFragment) mFragmentManager.findFragmentByTag(mainMemberFragment.class.getSimpleName());
+
                 }
                 if (fragment == null)
                     fragment = mainNewsFragment.newInstance();
                 break;
             case R.id.service:
                 if (mFragmentManager != null) {
-                    fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
+                    fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainServiceFragment.class.getSimpleName());
+                    fragmentHide1 = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
+                    fragmentHide2 = (RxFragment) mFragmentManager.findFragmentByTag(mainMemberFragment.class.getSimpleName());
                 }
                 if (fragment == null)
                     fragment = mainServiceFragment.newInstance();
                 break;
             case R.id.member:
                 if (mFragmentManager != null) {
-                    fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
+                    fragment = (RxFragment) mFragmentManager.findFragmentByTag(mainMemberFragment.class.getSimpleName());
+                    fragmentHide1 = (RxFragment) mFragmentManager.findFragmentByTag(mainServiceFragment.class.getSimpleName());
+                    fragmentHide2 = (RxFragment) mFragmentManager.findFragmentByTag(mainNewsFragment.class.getSimpleName());
                 }
                 if (fragment == null)
                     fragment = mainMemberFragment.newInstance();
@@ -94,13 +103,29 @@ public class MainActivity extends CustomTabBaseActivity implements mainNewsFragm
         }
 
         if (fragment != null && mFragmentManager != null) {
+
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frame_layout, fragment);
+            if (!fragment.isAdded()) {
+                fragmentTransaction.add(R.id.frame_layout, fragment, fragment.getClass().getSimpleName());
+            }
+
+            if (fragmentHide1 != null)
+                fragmentTransaction.hide(fragmentHide1);
+            if (fragmentHide2 != null)
+                fragmentTransaction.hide(fragmentHide2);
+            fragmentTransaction.show(fragment);
             fragmentTransaction.commit();
+
+
         } else {
             mFragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frame_layout, mainNewsFragment.newInstance());
+            if (!fragment.isAdded()) {
+                fragmentTransaction.add(R.id.frame_layout, fragment, fragment.getClass().getSimpleName());
+            }
+            Fragment hideFragment = getFragmentManager().findFragmentById(R.id.frame_layout);
+            if (hideFragment != null)
+                fragmentTransaction.show(fragment).hide(hideFragment);
             fragmentTransaction.commit();
         }
     }

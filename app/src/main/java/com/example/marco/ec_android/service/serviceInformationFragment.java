@@ -15,8 +15,8 @@ import butterknife.ButterKnife;
 
 public class serviceInformationFragment extends RxFragment {
 
+    public Button mNewsReserviceBtn;
     private serviceInformationFragment.OnFragmentInteractionListener listener;
-    public Button mNewsReserviceBtn ;
 
     public static serviceInformationFragment newInstance() {
         return new serviceInformationFragment();
@@ -37,7 +37,6 @@ public class serviceInformationFragment extends RxFragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(serviceInformationFragment.this.getActivity(), serviceStep1Activity.class);
-//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
                 intent.putExtra("ServiceType", "1000");
                 startActivity(intent);
             }

@@ -20,7 +20,6 @@ import butterknife.ButterKnife;
 
 public class serviceStep2Activity extends RxAppCompatActivity {
     public Button mBtnNext;
-    public String mServiceType;
     public EditText mEditName;
     public EditText mEditPhone;
     public EditText mEditEmail;
@@ -37,7 +36,6 @@ public class serviceStep2Activity extends RxAppCompatActivity {
         ButterKnife.bind(this);
         mToolbar = this.findViewById(R.id.toolbar);
         initActionBar();
-        mServiceType = getIntent().getStringExtra("ServiceType");
         mBtnNext = this.findViewById(R.id.btnNext);
         mEditName = this.findViewById(R.id.editName);
         mEditPhone = this.findViewById(R.id.editPhone);
