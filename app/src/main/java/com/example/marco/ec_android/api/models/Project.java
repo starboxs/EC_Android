@@ -3,6 +3,8 @@ package com.example.marco.ec_android.api.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Project {
+
+    @SerializedName("pid")
     public String pId;
     public String name;
     public String unit;
@@ -24,6 +26,7 @@ public class Project {
     @SerializedName("statusName")
     public String statusName;
 
+    @SerializedName("invoice_type")
     public String invoiceType;
     public String amount;
 

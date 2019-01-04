@@ -41,7 +41,7 @@ public class memberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, final int i) {
         Project p = mdata.get(i);
         ((ViewHolder) viewHolder).tvDesc.setText(p.pDesc);
         ((ViewHolder) viewHolder).tvServiceTypeName.setText(p.serviceTypeName);
@@ -58,6 +58,15 @@ public class memberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         } else {
             ((ViewHolder) viewHolder).ivServiceTypePhoto.setImageResource(R.mipmap.a005);
         }
+
+        ((ViewHolder) viewHolder).itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(i);
+                }
+            }
+        });
 
     }
 

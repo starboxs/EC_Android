@@ -23,4 +23,12 @@ public interface ApiInterface {
     @POST("Project/MyProjects")
     Observable<GetMyProjectsApiResponse> ProjectMyProjects(@Field("mid") String mid);
 
+    @FormUrlEncoded
+    @POST("Project/Detail")
+    Observable<GetMyProjectsApiResponse> ProjectDetail(@Field("pid") String pid);
+
+    @FormUrlEncoded
+    @POST("Project/Finish")
+    Observable<ApiResponse> ProjectFinish(@Field("pid") String pid);
+
 }
