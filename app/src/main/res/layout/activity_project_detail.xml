@@ -251,12 +251,13 @@
 
                 </LinearLayout>
             </LinearLayout>
-            
+
             <Button
                 android:id="@+id/btnNext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="施工完成" />
+                android:text="施工完成"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -35,6 +35,10 @@ public class projectDetailActivity extends RxAppCompatActivity {
     public TextView mTvServiceTimeType;
     public TextView mTvInvoiceType;
     public TextView mTvUser;
+    public TextView mTvconfirm_name;
+    public TextView mTvConfirm_tel;
+    public TextView mTvConfirm_mail;
+    public TextView mTvConfirm_address;
     private ActionBar mActionBar;
     private CustomProgressDialog mProgressDialog;
     private Project mData;
@@ -55,6 +59,10 @@ public class projectDetailActivity extends RxAppCompatActivity {
         mTvInvoiceType = this.findViewById(R.id.tvInvoice);
         mTvUser = this.findViewById(R.id.tvUser);
         mBtnNext = this.findViewById(R.id.btnNext);
+        mTvconfirm_name = this.findViewById(R.id.confirm_name);
+        mTvConfirm_tel = this.findViewById(R.id.confirm_tel);
+        mTvConfirm_mail = this.findViewById(R.id.confirm_mail);
+        mTvConfirm_address = this.findViewById(R.id.confirm_address);
         mProgressDialog = new CustomProgressDialog(this);
         init();
         mBtnNext.setOnClickListener(new View.OnClickListener() {
@@ -85,20 +93,22 @@ public class projectDetailActivity extends RxAppCompatActivity {
         }
 
         User user = Conf.GetUser();
-        userInfo = "姓名:" + user.name + "\n"
-                + "電話:" + user.phone + "\n"
-                + "Email:" + user.email + "\n"
-                + "服務地址:" + user.address + "\n";
+
         mTvServiceType.setText(mData.serviceTypeName);
         mTvAmount.setText(String.valueOf(mData.amount));
         mTvServiceTimeType.setText(mData.timeTypeName);
         mTvInvoiceType.setText(invoiceTypeName);
+        mTvconfirm_name.setText("姓名:" + user.name);
+        mTvConfirm_tel.setText("電話:" + user.phone);
+        mTvConfirm_mail.setText("Email:" + user.email);
+        mTvConfirm_address.setText("服務地址:" + user.address);
         mTvUser.setText(userInfo);
         if (mData.status.equals("1001")) {
             mBtnNext.setVisibility(View.VISIBLE);
         } else {
             mBtnNext.setVisibility(View.GONE);
         }
+
     }
 
     @Override
