@@ -42,7 +42,7 @@
                     android:id="@+id/tvTitile1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="服務項目"
+                    android:text="預約細節"
                     android:textStyle="bold" />
 
                 <LinearLayout
