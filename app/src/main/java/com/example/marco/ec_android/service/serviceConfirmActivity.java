@@ -64,7 +64,7 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
                 } else {
                     amount = String.valueOf(988 * Integer.parseInt(p.unit));
                 }
-                Api.getInstance().getApiInterface().ProjectCreate("", p.serviceType, p.userAddress, p.serviceTimeType, u.id, "", amount)
+                Api.getInstance().getApiInterface().ProjectCreate("", p.serviceType, p.userAddress, p.serviceTimeType, u.id, p.pDesc, amount)
 //                        .compose(this.<ApiResponse>bindToLifecycle())
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
@@ -164,6 +164,8 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
             serviceTypeName = "専業除蟎" + p.unit + "間";
             amount = 988 * Integer.parseInt(p.unit);
         }
+        p.pDesc = serviceTypeName;
+        Conf.setProject(p);
 
         switch (p.serviceTimeType) {
             case "1000":
