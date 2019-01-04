@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 public class serviceStep1Activity extends RxAppCompatActivity {
     public Button mBtnNext;
     public Toolbar mToolbar;
-    public String mServiceType;
     public TextView mTxtTitle;
     public EditText mEdTextUnit;
     private ActionBar mActionBar;
@@ -32,18 +31,17 @@ public class serviceStep1Activity extends RxAppCompatActivity {
         setContentView(R.layout.activity_reserve_service_price);
         ButterKnife.bind(this);
         mToolbar = this.findViewById(R.id.toolbar);
-        mServiceType = getIntent().getStringExtra("ServiceType");
         initActionBar();
         mEdTextUnit = this.findViewById(R.id.editText);
         mTxtTitle = this.findViewById(R.id.textView5);
         mBtnNext = this.findViewById(R.id.btnNext);
+
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
                 Intent intent = new Intent(serviceStep1Activity.this, serviceStep2Activity.class);
                 Project p = Conf.GetProject();
-                p.serviceType = mServiceType;
                 p.unit = mEdTextUnit.getText().toString();
                 Conf.setProject(p);
                 startActivity(intent);
@@ -75,7 +73,8 @@ public class serviceStep1Activity extends RxAppCompatActivity {
     }
 
     private void initUI() {
-        if (mServiceType.contentEquals("1000")) {
+        Project p = Conf.GetProject();
+        if (p.serviceType.contentEquals("1000")) {
             mTxtTitle.setText("居家清潔收費：$1,800元 / 4小時");
         } else {
             mTxtTitle.setText("專業除蟎收費：$988元 / 間");
