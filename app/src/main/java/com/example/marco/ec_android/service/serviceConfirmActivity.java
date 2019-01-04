@@ -69,7 +69,7 @@ public class serviceConfirmActivity extends RxAppCompatActivity {
                 } else {
                     amount = String.valueOf(988 * Integer.parseInt(p.unit));
                 }
-                Api.getInstance().getApiInterface().ProjectCreate("", p.serviceType, p.userAddress, p.serviceTimeType, u.id, p.pDesc, amount)
+                Api.getInstance().getApiInterface().ProjectCreate("", p.serviceType, p.userAddress, p.serviceTimeType, u.id, p.pDesc, amount, p.invoiceType)
 //                        .compose(this.<ApiResponse>bindToLifecycle())
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())

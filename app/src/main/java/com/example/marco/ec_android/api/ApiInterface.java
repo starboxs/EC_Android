@@ -16,7 +16,7 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("Project/Create")
-    Observable<ApiResponse> ProjectCreate(@Field("name") String name, @Field("type") String type, @Field("address") String address, @Field("time_type") String time_type, @Field("m_id") String m_id, @Field("pdesc") String pdesc, @Field("amount") String amount);
+    Observable<ApiResponse> ProjectCreate(@Field("name") String name, @Field("type") String type, @Field("address") String address, @Field("time_type") String time_type, @Field("m_id") String m_id, @Field("pdesc") String pdesc, @Field("amount") String amount, @Field("invoice_type") String invoice_type);
 
 
     @FormUrlEncoded
