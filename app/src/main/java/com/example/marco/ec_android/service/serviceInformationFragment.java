@@ -1,10 +1,12 @@
 package com.example.marco.ec_android.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.marco.ec_android.R;
 import com.trello.rxlifecycle.components.RxFragment;
@@ -14,6 +16,7 @@ import butterknife.ButterKnife;
 public class serviceInformationFragment extends RxFragment {
 
     private serviceInformationFragment.OnFragmentInteractionListener listener;
+    public Button mNewsReserviceBtn ;
 
     public static serviceInformationFragment newInstance() {
         return new serviceInformationFragment();
@@ -29,6 +32,16 @@ public class serviceInformationFragment extends RxFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_service_information, container, false);
         ButterKnife.bind(this, v);
+        mNewsReserviceBtn = v.findViewById(R.id.news_reservice);
+        mNewsReserviceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(serviceInformationFragment.this.getActivity(), serviceStep1Activity.class);
+//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
+                intent.putExtra("ServiceType", "1000");
+                startActivity(intent);
+            }
+        });
         return v;
     }
 

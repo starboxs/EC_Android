@@ -26,7 +26,7 @@ public class serviceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         mServiceList.add("專業除蟎");
         mServiceList.add("水管淨化");
         mServiceList.add("冷氣機清洗");
-        mServiceList.add("關於我們");
+        mServiceList.add("洗衣機清洗");
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
