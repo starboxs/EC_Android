@@ -3,6 +3,7 @@ package com.example.marco.ec_android.member;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -145,7 +146,10 @@ public class memberCenterFragment extends RxFragment implements memberAdapter.On
 
     @Override
     public void onItemClick(int position) {
-
+        Intent i = new Intent();
+        i.setClass(memberCenterFragment.this.getActivity(), projectDetailActivity.class);
+        i.putExtra("ProjectId", mDatas.get(position).pId);
+        startActivity(i);
     }
 
     public interface OnFragmentInteractionListener {

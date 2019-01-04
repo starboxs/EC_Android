@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="8dp"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/indexScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitile1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="服務項目" />
+
+                    <TextView
+                        android:id="@+id/tvServiceType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="總金額" />
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+
+                    <TextView
+                        android:id="@+id/tvTitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="服務時段" />
+
+                    <TextView
+                        android:id="@+id/tvServiceTimeType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="發票" />
+
+                    <TextView
+                        android:id="@+id/tvInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="聯絡資訊" />
+
+                    <TextView
+                        android:id="@+id/tvUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="施工完成" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

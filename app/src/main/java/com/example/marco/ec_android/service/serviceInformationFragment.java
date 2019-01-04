@@ -37,7 +37,6 @@ public class serviceInformationFragment extends RxFragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(serviceInformationFragment.this.getActivity(), serviceStep1Activity.class);
-                intent.putExtra("ServiceType", "1000");
                 startActivity(intent);
             }
         });

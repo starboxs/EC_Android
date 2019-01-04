@@ -3,27 +3,26 @@ package com.example.marco.ec_android.service;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
+import com.example.marco.ec_android.Conf;
 import com.example.marco.ec_android.R;
 import com.example.marco.ec_android.adapter.serviceAdapter;
+import com.example.marco.ec_android.api.models.Project;
 import com.trello.rxlifecycle.components.RxFragment;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class mainServiceFragment extends RxFragment implements serviceAdapter.OnItemClickListener {
 
+    public static String mServiceType;
     public serviceAdapter mServiceAdapter;
     RecyclerView mServiceRecyclerView;
     ArrayList mServiceList;
@@ -80,12 +79,11 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
     public void onItemClick(int position) {
         RxFragment fragment = null;
         fragment = serviceInformationFragment.newInstance();
+        Project p = Conf.GetProject();
+        p.serviceType = String.valueOf(1000 + position);
+        Conf.setProject(p);
         fragmentChack(fragment);
 
-//        Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
-////        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
-//        intent.putExtra("ServiceType", "1000");
-//        startActivity(intent);
     }
 
     private void fragmentChack(RxFragment fragment) {

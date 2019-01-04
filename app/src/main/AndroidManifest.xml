@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,15 +28,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".service.serviceStep1Activity"
-            android:screenOrientation="portrait">></activity>
-        <activity android:name=".service.serviceStep2Activity"
-            android:screenOrientation="portrait">></activity>
-        <activity android:name=".service.serviceStep3Activity"
-            android:screenOrientation="portrait">></activity>
-        <activity android:name=".service.serviceConfirmActivity"
-            android:screenOrientation="portrait">></activity>
-
+        <activity
+            android:name=".service.serviceStep1Activity"
+            android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name=".service.serviceStep2Activity"
+            android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name=".service.serviceStep3Activity"
+            android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name=".service.serviceConfirmActivity"
+            android:screenOrientation="portrait">>
+        </activity>
+        <activity
+            android:name=".member.projectDetailActivity"
+            android:screenOrientation="portrait">>
+        </activity>
     </application>
 
 </manifest>
