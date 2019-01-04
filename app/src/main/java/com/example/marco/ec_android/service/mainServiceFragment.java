@@ -77,10 +77,11 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
 
     @Override
     public void onItemClick(int position) {
-        RxFragment fragment = null;
+        serviceInformationFragment fragment = null;
         fragment = serviceInformationFragment.newInstance();
         Project p = Conf.GetProject();
         p.serviceType = String.valueOf(1000 + position);
+        fragment.mServiceType = p.serviceType;
         Conf.setProject(p);
         fragmentChack(fragment);
 
