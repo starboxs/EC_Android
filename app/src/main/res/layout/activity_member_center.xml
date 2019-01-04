@@ -88,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="預約項目"
                     android:textSize="16sp"
+                    android:textStyle="normal|bold"
                     tools:text="預約項目" />
             </LinearLayout>
 
