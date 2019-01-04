@@ -1,11 +1,13 @@
 package com.example.marco.ec_android.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.marco.ec_android.R;
@@ -38,43 +40,41 @@ public class serviceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder,final int i) {
         final Object item = mServiceList.get(i);
         ((serviceAdapter.ViewHolder) viewHolder).titleTextView.setText(item.toString());
-        System.out.println("數字:" + i);
         switch (i) {
             case 0:
-                ((ViewHolder) viewHolder).mImageView.setImageResource(R.drawable.img01);
-                System.out.println("數字1:" + i);
+                ((ViewHolder) viewHolder).mServiceLinear.setBackgroundColor(Color.parseColor("#009100"));
                 break;
             case 1:
-                ((ViewHolder) viewHolder).mImageView.setImageResource(R.drawable.img02);
-                System.out.println("數字2:" + i);
+                ((ViewHolder) viewHolder).mServiceLinear.setBackgroundColor(Color.parseColor("#ff8000"));
                 break;
             case 2:
-                ((ViewHolder) viewHolder).mImageView.setImageResource(R.drawable.img03);
-                System.out.println("數字3:" + i);
+                ((ViewHolder) viewHolder).mServiceLinear.setBackgroundColor(Color.parseColor("#4f9d9d"));
                 break;
             case 3:
-                ((ViewHolder) viewHolder).mImageView.setImageResource(R.drawable.img04);
-                System.out.println("數字4:" + i);
+                ((ViewHolder) viewHolder).mServiceLinear.setBackgroundColor(Color.parseColor("#b766ad"));
                 break;
             case 4:
-                ((ViewHolder) viewHolder).mImageView.setImageResource(R.drawable.img05);
-                System.out.println("數字5:" + i);
+                ((ViewHolder) viewHolder).mServiceLinear.setBackgroundColor(Color.parseColor("#ff359a"));
                 break;
         }
-
-
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(i);
+                }
+            }
+        });
     }
 
     public interface OnItemClickListener {
         void onItemClick(final int position);
     }
 
-    public interface OnLoadMoreListener {
-        void onLoadMore();
-    }
+
 
     public interface OnButtonClickListener {
         void onButtonClick(final int position);
@@ -82,12 +82,12 @@ public class serviceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView titleTextView;
-        public ImageView mImageView;
+        public LinearLayout mServiceLinear;
 
         public ViewHolder(View v) {
             super(v);
-            titleTextView = (TextView) v.findViewById(R.id.titleTextView);
-            mImageView = (ImageView) v.findViewById(R.id.imageView);
+            titleTextView =  v.findViewById(R.id.titleTextView);
+            mServiceLinear = v.findViewById(R.id.serviceLinearLayout);
         }
     }
 

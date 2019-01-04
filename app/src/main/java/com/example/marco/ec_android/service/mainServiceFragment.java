@@ -25,8 +25,6 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
     public serviceAdapter mServiceAdapter;
     RecyclerView mServiceRecyclerView;
     ArrayList mServiceList;
-    @Bind(R.id.btnService1000)
-    Button mbtnService1000;
     private mainServiceFragment.OnFragmentInteractionListener listener;
 
     public static mainServiceFragment newInstance() {
@@ -43,7 +41,6 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_service_clean_list, container, false);
         ButterKnife.bind(this, v);
-        mbtnService1000 = (Button) v.findViewById(R.id.btnService1000);
         mServiceRecyclerView = (RecyclerView) v.findViewById(R.id.serviceRecyclerView);
         mServiceRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         mServiceAdapter = new serviceAdapter(this.getActivity());
@@ -51,15 +48,6 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
 
         mServiceList = new ArrayList<>();
         mServiceRecyclerView.setAdapter(mServiceAdapter);
-        mbtnService1000.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
-//        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
-                intent.putExtra("ServiceType", "1000");
-                startActivity(intent);
-            }
-        });
         return v;
     }
 
@@ -87,13 +75,6 @@ public class mainServiceFragment extends RxFragment implements serviceAdapter.On
 
     @Override
     public void onItemClick(int position) {
-
-    }
-
-    @OnClick(R.id.btnService1000)
-    public void OnClickService1000() {
-        //開新頁到發案
-
         Intent intent = new Intent(mainServiceFragment.this.getActivity(), serviceStep1Activity.class);
 //        intent.putExtra(FlowType.EXTRA_KEY_FLOW_TYPE, mFlowType);
         intent.putExtra("ServiceType", "1000");
