@@ -24,6 +24,9 @@ public class serviceStep1Activity extends RxAppCompatActivity {
     public TextView mTxtTitle;
     public EditText mEdTextUnit;
     private ActionBar mActionBar;
+    private TextView mTxtDesc;
+    private TextView mTxtUnitTitle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class serviceStep1Activity extends RxAppCompatActivity {
         mEdTextUnit = this.findViewById(R.id.editText);
         mTxtTitle = this.findViewById(R.id.textView5);
         mBtnNext = this.findViewById(R.id.btnNext);
+        mTxtDesc = this.findViewById(R.id.textView6);
+        mTxtUnitTitle = this.findViewById(R.id.textView7);
 
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +81,14 @@ public class serviceStep1Activity extends RxAppCompatActivity {
         Project p = Conf.GetProject();
         if (p.serviceType.contentEquals("1000")) {
             mTxtTitle.setText("居家清潔收費：$1,800元 / 4小時");
+            mTxtDesc.setVisibility(View.VISIBLE);
+            mTxtUnitTitle.setText("服務管家人數");
+            mEdTextUnit.setHint("請輸入人數");
         } else {
             mTxtTitle.setText("專業除蟎收費：$988元 / 間");
+            mTxtDesc.setVisibility(View.GONE);
+            mTxtUnitTitle.setText("除蟎房間數量");
+            mEdTextUnit.setHint("請輸入房間數");
         }
 
     }
