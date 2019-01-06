@@ -26,11 +26,6 @@ import butterknife.ButterKnife;
 public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemClickListener {
 
     public newsAdapter mNewsAdapter;
-    TextView service01;
-    TextView service02;
-    TextView service03;
-    TextView service04;
-    TextView service05;
     ScrollView mScrollView;
     RecyclerView mNewsRecycleView;
     ArrayList mNewsList;
@@ -53,77 +48,12 @@ public class mainNewsFragment extends RxFragment implements newsAdapter.OnItemCl
         View v = inflater.inflate(R.layout.activity_index, container, false);
         ButterKnife.bind(this, v);
         mScrollView = (ScrollView) v.findViewById(R.id.indexScrollview);
-        service01 = (TextView) v.findViewById(R.id.service01);
-        service02 = (TextView) v.findViewById(R.id.service02);
-        service03 = (TextView) v.findViewById(R.id.service03);
-        service04 = (TextView) v.findViewById(R.id.service04);
-        service05 = (TextView) v.findViewById(R.id.service05);
         mNewsRecycleView = (RecyclerView) v.findViewById(R.id.newRecycleView);
         mNewsRecycleView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         mNewsAdapter = new newsAdapter(this.getActivity());
         mNewsAdapter.setOnItemClickListener(this);
         mNewsList = new ArrayList<>();
         mNewsRecycleView.setAdapter(mNewsAdapter);
-        service01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                serviceInformationFragment fragment = null;
-                fragment = serviceInformationFragment.newInstance();
-                Project p = Conf.GetProject();
-                p.serviceType = String.valueOf(1001);
-                fragment.mServiceType = p.serviceType;
-                Conf.setProject(p);
-                fragmentChack(fragment);
-            }
-        });
-        service02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                serviceInformationFragment fragment = null;
-                fragment = serviceInformationFragment.newInstance();
-                Project p = Conf.GetProject();
-                p.serviceType = String.valueOf(1002);
-                fragment.mServiceType = p.serviceType;
-                Conf.setProject(p);
-                fragmentChack(fragment);
-            }
-        });
-        service03.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                serviceInformationFragment fragment = null;
-                fragment = serviceInformationFragment.newInstance();
-                Project p = Conf.GetProject();
-                p.serviceType = String.valueOf(1002);
-                fragment.mServiceType = p.serviceType;
-                Conf.setProject(p);
-                fragmentChack(fragment);
-            }
-        });
-        service04.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                serviceInformationFragment fragment = null;
-                fragment = serviceInformationFragment.newInstance();
-                Project p = Conf.GetProject();
-                p.serviceType = String.valueOf(1002);
-                fragment.mServiceType = p.serviceType;
-                Conf.setProject(p);
-                fragmentChack(fragment);
-            }
-        });
-        service05.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                serviceInformationFragment fragment = null;
-                fragment = serviceInformationFragment.newInstance();
-                Project p = Conf.GetProject();
-                p.serviceType = String.valueOf(1002);
-                fragment.mServiceType = p.serviceType;
-                Conf.setProject(p);
-                fragmentChack(fragment);
-            }
-        });
         mScrollView.smoothScrollBy(0, 20);
         return v;
     }

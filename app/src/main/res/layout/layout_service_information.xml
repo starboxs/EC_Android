@@ -20,32 +20,6 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="true">
 
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/viewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:background="@mipmap/index_banner" />
-
-                <!-- 如果沒有作品 -->
-
-                <!--<TextView-->
-                <!--android:id="@+id/noCollectionTextView"-->
-                <!--style="@style/caption_text_black38"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerInParent="true"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_centerVertical="false"-->
-                <!--android:background="@color/colorBg"-->
-                <!--android:padding="@dimen/content_padding"-->
-                <!--android:text="@string/no_collection"-->
-                />
-
-                <!-- / 如果沒有作品 -->
-
             </RelativeLayout>
 
         </LinearLayout>

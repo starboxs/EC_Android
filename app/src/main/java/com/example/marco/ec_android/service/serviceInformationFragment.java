@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 
 public class serviceInformationFragment extends RxFragment implements Html.ImageGetter {
 
-    public String mServiceType;
+    public String mServiceType = "1000";
     public Button mNewsReserviceBtn;
     TextView tvDesc;
     String desc;
@@ -59,6 +59,12 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
                 startActivity(intent);
             }
         });
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            int item = bundle.getInt("data");
+            System.out.println("資料:" +item);
+            mServiceType = item+"";
+        }
         if (mServiceType.equals("1000")) {
             mNewsReserviceBtn.setText("預約居家清潔");
             desc = "<p dir=\"ltr\">\n" +

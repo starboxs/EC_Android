@@ -18,7 +18,6 @@
             android:layout_marginTop="6dp"
             android:gravity="center_vertical"
             android:minHeight="24dp"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
             android:text="標題"
             android:textSize="14sp" />
     </LinearLayout>
@@ -30,13 +29,17 @@
 
         <TextView
             android:id="@+id/newsDesc"
+            style="@style/caption_text_colorblackkkk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/caption_text_colorblackkkk"
             android:layout_marginTop="@dimen/content_padding"
             android:gravity="center_vertical"
             android:minHeight="@dimen/default_size"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
             android:text="內容" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"></LinearLayout>
 </LinearLayout>
