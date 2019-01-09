@@ -30,23 +30,23 @@
         </activity>
         <activity
             android:name=".service.serviceStep1Activity"
-            android:screenOrientation="portrait">>
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".service.serviceStep2Activity"
-            android:screenOrientation="portrait">>
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".service.serviceStep3Activity"
-            android:screenOrientation="portrait">>
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".service.serviceConfirmActivity"
-            android:screenOrientation="portrait">>
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".member.projectDetailActivity"
-            android:screenOrientation="portrait">>
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

@@ -17,7 +17,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.marco.ec_android.Conf;
 import com.example.marco.ec_android.R;
+import com.example.marco.ec_android.api.models.Project;
 import com.trello.rxlifecycle.components.RxFragment;
 
 import java.io.FileNotFoundException;
@@ -56,14 +58,17 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(serviceInformationFragment.this.getActivity(), serviceStep1Activity.class);
+                Project p = Conf.GetProject();
+                p.serviceType = mServiceType;
+                Conf.setProject(p);
                 startActivity(intent);
             }
         });
         Bundle bundle = getArguments();
         if (bundle != null) {
             int item = bundle.getInt("data");
-            System.out.println("資料:" +item);
-            mServiceType = item+"";
+            System.out.println("資料:" + item);
+            mServiceType = item + "";
         }
         if (mServiceType.equals("1000")) {
             mNewsReserviceBtn.setText("預約居家清潔");
