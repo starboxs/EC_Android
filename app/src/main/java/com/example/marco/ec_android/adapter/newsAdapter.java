@@ -1,12 +1,10 @@
 package com.example.marco.ec_android.adapter;
 
 import android.content.Context;
-import android.media.SoundPool;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.marco.ec_android.R;
@@ -22,12 +20,15 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public newsAdapter(Context context) {
         this.mContext = context;
-        mNewsList.add("購買二手屋，請問這裂縫有危險嗎？");
-        mNewsList.add("小家庭客廳坪數不大的沙發選擇?");
-        mNewsList.add("寢之堡防螨床包材質的差別？");
-        mNewsDecList.add("早年有很多房子都是建物完成後 ，地方政府驗過後 ，再做整體的二次施工把陽台外推或頂樓加蓋");
-        mNewsDecList.add("主要是變化性很多，除了一般的雙、三人座沙發還可以組成小L型的，外面比較少見到所以看到時挺驚豔的");
-        mNewsDecList.add("店員推薦竹纖維材質比較天然，睡起來也很舒服");
+        mNewsList.add("大掃除預約最後倒數~讓您乾淨歡喜迎接新年");
+        mNewsList.add("專業除塵螨送除窗簾一組");
+        mNewsList.add("直立式洗衣機清洗特價中");
+        mNewsDecList.add("清潔時間：2018/12/26~2019/02/01\n" +
+                "大掃除預約最後倒數！加價專業除塵螨，最高89折!錯過等明年!\n");
+        mNewsDecList.add("活動時間：2019/01/10~2019/01/20\n" +
+                "除塵螨動作不可少，專業清潔人員施作，除螨效果親眼可見。\n");
+        mNewsDecList.add("特價期間：2019/01/21~2019/01/31\n" +
+                "洗衣機內槽比馬桶還要髒530倍！為了家人的健康，預約洗衣機清洗現折300元！(限直立式洗衣機無烘衣功能)\n");
     }
 
     public void setOnItemClickListener(newsAdapter.OnItemClickListener onItemClickListener) {
@@ -39,7 +40,6 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         LayoutInflater v = LayoutInflater.from(viewGroup.getContext());
         return new ViewHolder(v.inflate(R.layout.item_news, viewGroup, false));
     }
-
 
 
     @Override
@@ -54,6 +54,11 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             }
         });
+    }
+
+    @Override
+    public int getItemCount() {
+        return mNewsList.size();
     }
 
     public interface OnItemClickListener {
@@ -77,11 +82,6 @@ public class newsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             newsTitle = v.findViewById(R.id.newsTitle);
             newsDesc = v.findViewById(R.id.newsDesc);
         }
-    }
-
-    @Override
-    public int getItemCount() {
-        return mNewsList.size();
     }
 }
 
