@@ -36,6 +36,7 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
     public Button mNewsReserviceBtn;
     TextView tvDesc;
     String desc;
+    TextView mTvTitle;
     private serviceInformationFragment.OnFragmentInteractionListener listener;
 
     public static serviceInformationFragment newInstance() {
@@ -54,6 +55,7 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
         ButterKnife.bind(this, v);
         mNewsReserviceBtn = v.findViewById(R.id.news_reservice);
         tvDesc = (TextView) v.findViewById(R.id.textView2);
+        mTvTitle = (TextView) v.findViewById(R.id.textView3);
         mNewsReserviceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,11 +73,9 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
             mServiceType = item + "";
         }
         if (mServiceType.equals("1000")) {
+            mTvTitle.setText("居家清潔");
             mNewsReserviceBtn.setText("預約居家清潔");
             desc = "<p dir=\"ltr\">\n" +
-                    "    居家清潔\n" +
-                    "</p>\n" +
-                    "<p dir=\"ltr\">\n" +
                     "    您是職業婦女嗎?您有打掃住家的困擾嗎?\n" +
                     "</p>\n" +
                     "<p dir=\"ltr\">\n" +
@@ -268,12 +268,10 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
                     "        </p>\n" +
                     "    </li>\n" +
                     "</ul>";
-        } else {
+        } else if (mServiceType.contentEquals("1001")) {
             mNewsReserviceBtn.setText("預約専業除蟎");
+            mTvTitle.setText("專業除蟎");
             desc = "<p dir=\"ltr\">\n" +
-                    "    專業除螨\n" +
-                    "</p>\n" +
-                    "<p dir=\"ltr\">\n" +
                     "    去蟎蟲更健康\n" +
                     "</p>\n" +
                     "<ul>\n" +
@@ -387,8 +385,207 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
                     "/>\n" +
                     "<br/>\n" +
                     "<br/>";
+        } else if (mServiceType.contentEquals("1002")) {
+            mNewsReserviceBtn.setText("預約水管淨化");
+            mTvTitle.setText("水管淨化");
+            desc = "<p dir=\"ltr\">\n" +
+                    "    水塔定期清洗就可以確保用水衛生了嗎?\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    為何家裡的水管需要清洗呢 ? 自來水管幹內藏有大量大腸桿菌和砷、 汞、鐵、 錳等重金屬及大量泥沙、\n" +
+                    "    鐵鏽、泥沙，會隨著管幹流入水塔內，再流入家用水管內！\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    長年沒有清洗水管，很可能積累很多微生物、鐵鏽等雜質，甚至會有水量越來越小，流出有顏色的水等問題。\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    每天刷牙洗臉漱口時，就是使用這樣的水質，您安心嗎?\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    [簡單自我檢測] 我家該洗水管嗎??\n" +
+                    "</p>\n" +
+                    "<ul>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            超過兩年沒有洗水管\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            水龍頭流出的水量越來越少\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            熱水器時而點不著或等很久才有熱水\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            清洗過水塔後，水中仍有沉澱物或異味\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            超過一周沒開過水龍頭，使用時有「非透明」的水流出\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "</ul>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    以上狀況只要超過一個，就應該洗水管啦！\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    水管淨化必選潔屋大師3大理由\n" +
+                    "</p>\n" +
+                    "<ol>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            採用食品級檸檬酸，不使用化工原料清洗\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            使用無壓週波清洗設備，沒有洗後漏水的顧慮\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "</ol>\n" +
+                    "<br/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh4.googleusercontent.com/r2AwN1OcBFhrm-Drq8OzCPv8H6jQioThfyV3t3-3x1fKRpLxmTZlDwaGhYFvilT73EEun-V1Q9jpj03AyPlit8zUpe9Cz_6FXud2-B64YchX2_gJ2FppjRI1EHyBhv7KtuBqunNK9Df8nQol0g\"\n" +
+                    "    width=\"166\"\n" +
+                    "    height=\"186\"\n" +
+                    "/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh5.googleusercontent.com/IKXWlmPp-V009zQJxVHgd8KSdPYEcu2cMnT43hHkXTlbkvJQM3qHq4f0tqBMOct3kJ69QM0Tr5O9VtP7Sik8DnFkj8nN1vz6fNRe2S7rXry5SQa_HY4l0-s7si1JHRc1bEX-VXJtZqOUb4LkPg\"\n" +
+                    "    width=\"166\"\n" +
+                    "    height=\"186\"\n" +
+                    "/>\n" +
+                    "<ol start=\"3\">\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            水管淨化效果立見\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "</ol>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    清洗過程中讓您立即看到清洗效果，完成後會將清洗前、中、後的水質讓客戶立即比較清洗效果。\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh3.googleusercontent.com/sKm-25Khi9ets13V9MWaYXPSqHz-AUosMpxf-FjDvdp3mRCN5KXJ02bdrcSziEgmHvuOoNiHaDsiWf62ICyzyA7NL8Fy5bnMAOUm_VXSuy-oUxS8GGmLc64_MkgKZ-73h9DBzkznCJC1YSFwkA\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh3.googleusercontent.com/vC0JkaBaGgRJ6FWLmD6G23jcb2UMDaTu57qy3xfg2gpJrGCF5tT9ADm1pwPOujL2-_4lXWq5MW545OAc_Alq4SftIBYfjMqA3sjElWyBc8AYMiyyB9zwCClVPZ2di-HpHNmGJwI95TqqAr5Q_Q\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh6.googleusercontent.com/GSR71QuBPIY8LyhbIdR81jtU7RtpJOzt3MwPYl3_8HRyFuAPsOFqK7G2COY4W9Y70CghmEoUBkKd-x2br5fx3KWsVykDy5WDpZEdYGcnL6j_-JIFOQIJhVljVIsQTDE5tlgIIgBO7QVa7qFNdA\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "</div>";
+        } else if (mServiceType.contentEquals("1003")) {
+            mNewsReserviceBtn.setText("預約冷氣機清洗");
+            mTvTitle.setText("冷氣機清洗");
+            desc = "<p dir=\"ltr\">\n" +
+                    "    冷氣只洗濾網是遠遠不夠的！冷氣因為使用後機體內部潮濕，會導致空氣中髒污及棉絮纖維混合結塊，成了霉菌、塵螨等各式過敏原的溫床，若不使用藥水、高壓水柱的清洗，加上高溫蒸氣及紫外線的殺菌，不僅冷氣內部會孳生過敏原還會吹出霉味，且冷氣效能大受影響，使用起來不但不夠涼還會相當耗電。\n" +
+                    "    <br/>\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    [簡單自我檢測] 我家冷氣該清洗了嗎??\n" +
+                    "</p>\n" +
+                    "<ul>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            冷氣不冷\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            冷氣異常耗電\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            開冷氣時有異味/霉味\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            冷氣運轉聲音很大\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "    <li dir=\"ltr\">\n" +
+                    "        <p dir=\"ltr\">\n" +
+                    "            家人長期過敏\n" +
+                    "        </p>\n" +
+                    "    </li>\n" +
+                    "</ul>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    以上狀況只要超過一個，就應該清洗冷氣啦！\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    冷氣冷氣4大好處\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    冷-提升冷房效果\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    省-恆溫省電省錢\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    長-延長冷氣壽命\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    靜-降低細菌孳生\n" +
+                    "    <img\n" +
+                    "        src=\"https://lh4.googleusercontent.com/Cil_XynwVuwWjor-pU5vUlcYsXthJOvvCva7bjX_Xt_XdyLzhrdITDZki0C2fl2QwuF0XXWkNYq0jnPohraeWJjIbzw71VKojaAjc_l1v24YIbeOfFSTK0ht35wKYvMWpqVk-6ch83X50Ae-zw\"\n" +
+                    "        width=\"275\"\n" +
+                    "        height=\"136\"\n" +
+                    "    />\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<br/>\n" +
+                    "<br/>\n" +
+                    "<br/>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    冷氣清洗流程\n" +
+                    "</p>\n" +
+                    "<p dir=\"ltr\">\n" +
+                    "    檢測冷氣效能→進行環境防護→架設集水罩→拆卸外殼水盤→電路保護措施→上清潔劑→機體清洗→防霉處理→組裝還原→環境恢復→檢測驗收\n" +
+                    "</p>\n" +
+                    "<br/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh4.googleusercontent.com/7xzptsoMzU-vY_wXT108_1iBS3GpnCZEtAfdyyrD0XnqYrjvQk3cHuJHlsbq5zXipa3oMD9QCb7H-X0ptjwbK16rxvN81YTWuuJrmPNwgJeeBu9fin9MEtWVqMsFdWc9MzM2R4AsR-1sivTwpA\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh4.googleusercontent.com/w4MxnM0RDSv7MM0V72lvIln9hzNMW6yA3EtKo-Nd1NyEDD9l6y4hPnNsQtsdabaMQYkvuMqY8dezlpqb3twoV9kClk-nQLBQkgcKlVdqUYQdFxuKsg4JBqNsY_EVShYJOSJG_gvk_Znaqv-qMQ\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "<img\n" +
+                    "    src=\"https://lh3.googleusercontent.com/mvCC7-vnVp9_XlVkMaAZtMe8YKt954_-dvvxbLwtD8PJi4dczI40KHa8BBYvn9IuHQQUeL1G4sGVKBIB9TBqdXzrJD7SwKcNkhx0V36CXuhiXZpvkwRXztNqZGFUCxcfa7tktY3Wq703xG7KSA\"\n" +
+                    "    width=\"189\"\n" +
+                    "    height=\"189\"\n" +
+                    "/>\n" +
+                    "<br/>";
+        } else {
+            mNewsReserviceBtn.setText("預約洗衣機清洗");
+            mTvTitle.setText("洗衣機清洗");
+            desc = "<pre id=\"result-source\"><p dir=\"ltr\">清洗好的乾淨衣物上總是會出現小斑點或殘留物嗎？</p><p dir=\"ltr\">洗衣機的運轉聲音越來越大聲嗎？</p><p dir=\"ltr\">烘衣都需烘許久才會乾嗎？</p><p dir=\"ltr\">如果洗衣機使用頻繁或是長久未使用，在悶熱的天氣下，加上洗衣機內部潮濕的環境，很容易產生大量的細菌；原本是將衣物洗乾淨的洗衣機，反而將衣物越洗越髒，而這樣的狀況也可能造成皮膚過敏，或可能對女性帶來婦科疾病的威脅，因此清洗洗衣機內部也是相當重要的，守護您的家人，就從我們身邊的生活小事做起吧！</p><br/><p dir=\"ltr\">[簡單自我檢測] 我家洗衣機該清洗了嗎??</p><ul><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有異味/霉味</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有黑點及棉絮</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗衣機運轉聲音很大</p></li><li dir=\"ltr\"><p dir=\"ltr\">家人長期過敏</p></li></ul><p dir=\"ltr\">以上狀況只要超過一個，就應該清洗冷氣啦！</p><br/><p dir=\"ltr\">洗衣機清洗4大好處</p><p dir=\"ltr\">潔-衣服洗得更乾淨</p><p dir=\"ltr\">淨-病毒細菌不要來</p><p dir=\"ltr\">絕-杜絕機體藏汙垢</p><p dir=\"ltr\">健-家人健康少過敏<img src=\"https://lh3.googleusercontent.com/ebnYMCX2JEewb0EPU26EbIzhzuKIvyTvueNdCvhARu1BNoIw6dVvBxgNiK7vjgJo7k3Z6MT7serSTsuT9c4H0M4dBCKYX7M8kB0u76bGHo3UjiRn9xcNXewMrnswl5IG-x4DVzD2u12dbH8aoA\" width=\"261\" height=\"136\"/></p><p dir=\"ltr\">洗衣機清洗流程</p><p dir=\"ltr\">洗衣機運轉檢測→拆卸洗衣機→內桶高壓清洗→洗衣盤清洗→安裝恢復→現場整理 →檢測驗收</p><br/><p dir=\"ltr\">清洗前後比較<img src=\"https://lh3.googleusercontent.com/idiDS6uvaxEqeeibcdxa9Dll758TrndbwaxJ4PoAkrjEYhkbBIskdnuB76t27MGNZDNtZsEZtbDgzrj9JmXHSimXyDtJBZ1XEDfO-YQKjvGai3QFnwYT50JK8nuAOnd75tqEoyPWUIsJJIMoEw\" width=\"188\" height=\"189\"/></p><br/><img src=\"https://lh6.googleusercontent.com/nHOGxHiPKiL5iC-5bbEE2uUxnFj81DIbuG_NGiL-MLCPG1DtpUekQ2eSDpRucc_y0iV09-Pv6a6Clw0AQgXH1l4kpVeKm3WmlLp3PBDKQ0VHwebW5_BmHMj9_lFcAYU1UR32XTRz9E_ZDTzZJg\" width=\"189\" height=\"189\"/><br/><br/><br/><br/><br/><br/><img src=\"https://lh6.googleusercontent.com/15SVgkRZMQNkfDfgeYuZRfxym65Dqzyqlne4vKeEs6tMywIFi75piCwSMP9G9HV4EtoWzF9wZ7Rmd-_RksgGmSJhXBeNAoaDqHFEFh2qu9v5PkiWtsNPOEJNzYmSx2zpEljCFO9i8Iyy1jfwMQ\" width=\"189\" height=\"189\"/><br/><img src=\"https://lh6.googleusercontent.com/9T7Ax3DIUa554ciDdZSEP6rXnNryFyIlQiYDMbavJPcnaXD46-3i7q9c16PGZowhJdb1yGDtEDujmiRLaIeKpd0DT1r_eLhNNbASnE5k3nwUhi9BFqJucg_Pso7WY-lVBt_9tmJYBy8RH-qpIw\" width=\"189\" height=\"189\"/><br/><br/><br/></pre>";
         }
-        Spanned spanned = Html.fromHtml(desc, this, null);
+
+
+        Spanned spanned = Html.fromHtml(desc, serviceInformationFragment.this, null);
         tvDesc.setText(spanned);
         return v;
     }
