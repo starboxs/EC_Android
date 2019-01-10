@@ -545,16 +545,13 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
                     "</p>\n" +
                     "<p dir=\"ltr\">\n" +
                     "    靜-降低細菌孳生\n" +
+                    "<br/>\n" +
                     "    <img\n" +
                     "        src=\"https://lh4.googleusercontent.com/Cil_XynwVuwWjor-pU5vUlcYsXthJOvvCva7bjX_Xt_XdyLzhrdITDZki0C2fl2QwuF0XXWkNYq0jnPohraeWJjIbzw71VKojaAjc_l1v24YIbeOfFSTK0ht35wKYvMWpqVk-6ch83X50Ae-zw\"\n" +
                     "        width=\"275\"\n" +
                     "        height=\"136\"\n" +
                     "    />\n" +
                     "</p>\n" +
-                    "<br/>\n" +
-                    "<br/>\n" +
-                    "<br/>\n" +
-                    "<br/>\n" +
                     "<p dir=\"ltr\">\n" +
                     "    冷氣清洗流程\n" +
                     "</p>\n" +
@@ -581,7 +578,7 @@ public class serviceInformationFragment extends RxFragment implements Html.Image
         } else {
             mNewsReserviceBtn.setText("預約洗衣機清洗");
             mTvTitle.setText("洗衣機清洗");
-            desc = "<pre id=\"result-source\"><p dir=\"ltr\">清洗好的乾淨衣物上總是會出現小斑點或殘留物嗎？</p><p dir=\"ltr\">洗衣機的運轉聲音越來越大聲嗎？</p><p dir=\"ltr\">烘衣都需烘許久才會乾嗎？</p><p dir=\"ltr\">如果洗衣機使用頻繁或是長久未使用，在悶熱的天氣下，加上洗衣機內部潮濕的環境，很容易產生大量的細菌；原本是將衣物洗乾淨的洗衣機，反而將衣物越洗越髒，而這樣的狀況也可能造成皮膚過敏，或可能對女性帶來婦科疾病的威脅，因此清洗洗衣機內部也是相當重要的，守護您的家人，就從我們身邊的生活小事做起吧！</p><br/><p dir=\"ltr\">[簡單自我檢測] 我家洗衣機該清洗了嗎??</p><ul><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有異味/霉味</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有黑點及棉絮</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗衣機運轉聲音很大</p></li><li dir=\"ltr\"><p dir=\"ltr\">家人長期過敏</p></li></ul><p dir=\"ltr\">以上狀況只要超過一個，就應該清洗冷氣啦！</p><br/><p dir=\"ltr\">洗衣機清洗4大好處</p><p dir=\"ltr\">潔-衣服洗得更乾淨</p><p dir=\"ltr\">淨-病毒細菌不要來</p><p dir=\"ltr\">絕-杜絕機體藏汙垢</p><p dir=\"ltr\">健-家人健康少過敏<img src=\"https://lh3.googleusercontent.com/ebnYMCX2JEewb0EPU26EbIzhzuKIvyTvueNdCvhARu1BNoIw6dVvBxgNiK7vjgJo7k3Z6MT7serSTsuT9c4H0M4dBCKYX7M8kB0u76bGHo3UjiRn9xcNXewMrnswl5IG-x4DVzD2u12dbH8aoA\" width=\"261\" height=\"136\"/></p><p dir=\"ltr\">洗衣機清洗流程</p><p dir=\"ltr\">洗衣機運轉檢測→拆卸洗衣機→內桶高壓清洗→洗衣盤清洗→安裝恢復→現場整理 →檢測驗收</p><br/><p dir=\"ltr\">清洗前後比較<img src=\"https://lh3.googleusercontent.com/idiDS6uvaxEqeeibcdxa9Dll758TrndbwaxJ4PoAkrjEYhkbBIskdnuB76t27MGNZDNtZsEZtbDgzrj9JmXHSimXyDtJBZ1XEDfO-YQKjvGai3QFnwYT50JK8nuAOnd75tqEoyPWUIsJJIMoEw\" width=\"188\" height=\"189\"/></p><br/><img src=\"https://lh6.googleusercontent.com/nHOGxHiPKiL5iC-5bbEE2uUxnFj81DIbuG_NGiL-MLCPG1DtpUekQ2eSDpRucc_y0iV09-Pv6a6Clw0AQgXH1l4kpVeKm3WmlLp3PBDKQ0VHwebW5_BmHMj9_lFcAYU1UR32XTRz9E_ZDTzZJg\" width=\"189\" height=\"189\"/><br/><br/><br/><br/><br/><br/><img src=\"https://lh6.googleusercontent.com/15SVgkRZMQNkfDfgeYuZRfxym65Dqzyqlne4vKeEs6tMywIFi75piCwSMP9G9HV4EtoWzF9wZ7Rmd-_RksgGmSJhXBeNAoaDqHFEFh2qu9v5PkiWtsNPOEJNzYmSx2zpEljCFO9i8Iyy1jfwMQ\" width=\"189\" height=\"189\"/><br/><img src=\"https://lh6.googleusercontent.com/9T7Ax3DIUa554ciDdZSEP6rXnNryFyIlQiYDMbavJPcnaXD46-3i7q9c16PGZowhJdb1yGDtEDujmiRLaIeKpd0DT1r_eLhNNbASnE5k3nwUhi9BFqJucg_Pso7WY-lVBt_9tmJYBy8RH-qpIw\" width=\"189\" height=\"189\"/><br/><br/><br/></pre>";
+            desc = "<pre id=\"result-source\"><p dir=\"ltr\">清洗好的乾淨衣物上總是會出現小斑點或殘留物嗎？</p><p dir=\"ltr\">洗衣機的運轉聲音越來越大聲嗎？</p><p dir=\"ltr\">烘衣都需烘許久才會乾嗎？</p><p dir=\"ltr\">如果洗衣機使用頻繁或是長久未使用，在悶熱的天氣下，加上洗衣機內部潮濕的環境，很容易產生大量的細菌；原本是將衣物洗乾淨的洗衣機，反而將衣物越洗越髒，而這樣的狀況也可能造成皮膚過敏，或可能對女性帶來婦科疾病的威脅，因此清洗洗衣機內部也是相當重要的，守護您的家人，就從我們身邊的生活小事做起吧！</p><br/><p dir=\"ltr\">[簡單自我檢測] 我家洗衣機該清洗了嗎??</p><ul><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有異味/霉味</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗好的衣服有黑點及棉絮</p></li><li dir=\"ltr\"><p dir=\"ltr\">洗衣機運轉聲音很大</p></li><li dir=\"ltr\"><p dir=\"ltr\">家人長期過敏</p></li></ul><p dir=\"ltr\">以上狀況只要超過一個，就應該清洗冷氣啦！</p><br/><p dir=\"ltr\">洗衣機清洗4大好處</p><p dir=\"ltr\">潔-衣服洗得更乾淨</p><p dir=\"ltr\">淨-病毒細菌不要來</p><p dir=\"ltr\">絕-杜絕機體藏汙垢</p><p dir=\"ltr\">健-家人健康少過敏<img src=\"https://lh3.googleusercontent.com/ebnYMCX2JEewb0EPU26EbIzhzuKIvyTvueNdCvhARu1BNoIw6dVvBxgNiK7vjgJo7k3Z6MT7serSTsuT9c4H0M4dBCKYX7M8kB0u76bGHo3UjiRn9xcNXewMrnswl5IG-x4DVzD2u12dbH8aoA\" width=\"261\" height=\"136\"/></p><p dir=\"ltr\">洗衣機清洗流程</p><p dir=\"ltr\">洗衣機運轉檢測→拆卸洗衣機→內桶高壓清洗→洗衣盤清洗→安裝恢復→現場整理 →檢測驗收</p><br/><p dir=\"ltr\">清洗前後比較<br/><img src=\"https://lh3.googleusercontent.com/idiDS6uvaxEqeeibcdxa9Dll758TrndbwaxJ4PoAkrjEYhkbBIskdnuB76t27MGNZDNtZsEZtbDgzrj9JmXHSimXyDtJBZ1XEDfO-YQKjvGai3QFnwYT50JK8nuAOnd75tqEoyPWUIsJJIMoEw\" width=\"188\" height=\"189\"/></p><br/><img src=\"https://lh6.googleusercontent.com/nHOGxHiPKiL5iC-5bbEE2uUxnFj81DIbuG_NGiL-MLCPG1DtpUekQ2eSDpRucc_y0iV09-Pv6a6Clw0AQgXH1l4kpVeKm3WmlLp3PBDKQ0VHwebW5_BmHMj9_lFcAYU1UR32XTRz9E_ZDTzZJg\" width=\"189\" height=\"189\"/><br/><br/><br/><br/><br/><br/><img src=\"https://lh6.googleusercontent.com/15SVgkRZMQNkfDfgeYuZRfxym65Dqzyqlne4vKeEs6tMywIFi75piCwSMP9G9HV4EtoWzF9wZ7Rmd-_RksgGmSJhXBeNAoaDqHFEFh2qu9v5PkiWtsNPOEJNzYmSx2zpEljCFO9i8Iyy1jfwMQ\" width=\"189\" height=\"189\"/><br/><img src=\"https://lh6.googleusercontent.com/9T7Ax3DIUa554ciDdZSEP6rXnNryFyIlQiYDMbavJPcnaXD46-3i7q9c16PGZowhJdb1yGDtEDujmiRLaIeKpd0DT1r_eLhNNbASnE5k3nwUhi9BFqJucg_Pso7WY-lVBt_9tmJYBy8RH-qpIw\" width=\"189\" height=\"189\"/><br/><br/><br/></pre>";
         }
 
 
