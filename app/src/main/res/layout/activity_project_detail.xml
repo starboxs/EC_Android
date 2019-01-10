@@ -126,7 +126,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingBottom="5dp"
-                                    android:text="地址：中國台北高雄市"
+                                    android:text="地址：高雄市鼓山區"
                                     android:textSize="16dp" />
                             </LinearLayout>
 

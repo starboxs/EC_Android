@@ -133,6 +133,7 @@ public class projectDetailActivity extends RxAppCompatActivity {
     }
 
     private void init() {
+        mProgressDialog.show();
         Api.getInstance().getApiInterface().ProjectDetail(mProjectId)
 //                        .compose(this.<GetMyProjectsApiResponse>bindToLifecycle())
                 .subscribeOn(Schedulers.io())
@@ -173,7 +174,7 @@ public class projectDetailActivity extends RxAppCompatActivity {
     }
 
     private void setFinish() {
-
+        mProgressDialog.show();
         final AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.dialog_theme);
         builder.setTitle("系統訊息")
                 .setMessage("施工完成了嗎？")
